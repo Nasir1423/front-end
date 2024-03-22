@@ -1,6 +1,16 @@
 HTML+CSS 学习参考：https://www.bilibili.com/video/BV1p84y1P7Z5/
 
-# Supplements（day1）
+# 学习资料参考
+
+|                             视频                             |                             文档                             |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                                                              | [w3school HTML 标签手册](https://www.w3school.com.cn/tags/index.asp) |
+|                                                              | [MDN HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML) |
+| [尚硅谷前端入门html+css零基础教程](https://www.bilibili.com/video/BV1p84y1P7Z5/?vd_source=eaadd872ca69236ad3048a85294b829b) | [W3C HTML Standard](https://html.spec.whatwg.org/multipage/) |
+|                                                              | [w3school CSS 教程](https://www.w3school.com.cn/css/index.asp) |
+|                                                              | [MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS)  |
+
+# PART1 Supplements（day1：0%）
 
 ## C/S & B/S 架构
 
@@ -46,7 +56,7 @@ HTML+CSS 学习参考：https://www.bilibili.com/video/BV1p84y1P7Z5/
     - 使用 VSCode 打开的必须是**文件夹**
     - 打开的网页必须是**标准的 HTML 结构**，否则无法自动刷新
 
-# HTML4
+# PART2 HTML4
 
 ## 初认识
 
@@ -235,7 +245,7 @@ HTML+CSS 学习参考：https://www.bilibili.com/video/BV1p84y1P7Z5/
 - `h1` 不仅仅表示一级标题，还可以看作是**重要性**的表征，一般只写一个
 - [1-排版标签.html](./CODES/1-排版标签.html)
 
-## 语义化标签（day2|22p）
+## 语义化标签（day2|22p：9.1%）
 
 1. **语义化标签**：即用特定的标签，表达特定的含义。这要求我们在使用 HTML 的标签时，关注的应该是**标签的语义**，而不是标签的效果（这一点是由 CSS 来完成的）。如， `h1` 标签的语义为“网页的主要内容”，效果是“文字加粗加大”，我们更应该关注的是前者。
 2. 关注标签语义的优点
@@ -451,7 +461,7 @@ HTML+CSS 学习参考：https://www.bilibili.com/video/BV1p84y1P7Z5/
 
 5. 什么是**超文本**？超文本是一种组织信息的方式，通过超链接将不同空间的文字、图片等各种信息组织在一起，能从当前阅读的内容，跳转到超链接所指向的内容（页面、文件、锚点、应用）。
 
-## 列表（day3|35p）
+## 列表（day3|35p：14.5%）
 
 [4-列表.html](./CODES/4-列表.html)
 
@@ -910,7 +920,7 @@ HTML+CSS 学习参考：https://www.bilibili.com/video/BV1p84y1P7Z5/
 
 <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/HTML4%20%E5%85%B6%E4%BB%96.svg" alt="HTML4 其他" style="width: 80%; display: block; margin: 0 auto;" />
 
-# CSS2
+# PART3 CSS2
 
 ## 初认识
 
@@ -1264,7 +1274,7 @@ CSS 的注释以 `/*` 开始，以 `*/` 结束。
 - 父元素也算是祖先元素的一种，但是一般还是称呼为父元素
 - 子元素也算是后代元素的一种，但是一般还是称呼为子元素
 
-### 后代选择器（day4|71p）
+### 后代选择器（day4|71p：26.1%）
 
 1. **后代选择器**：`selector_1 selector_2 ... selector_n`，选中指定元素中符合要求的**后代元素**。
 
@@ -1552,7 +1562,7 @@ CSS 的注释以 `/*` 开始，以 `*/` 结束。
 3. **优先级**：简单的说，!important>行内样式>ID选择器>类选择器>元素选择器>通配选择器>继承的样式；复杂的复合选择器则需要通过权重计算进行优先级比较。
    - **并集选择器的每一个部分的权重都是分开计算的**
 
-## 像素和颜色（day5|88p）
+## 像素和颜色（day5|88p：32.8%）
 
 1. **像素**（pixel）：图像中的最小的元素点，具有特定的位置及颜色值，每个像素的颜色是由强度不同的红、绿、蓝三原色组合而成的。
 
@@ -1748,16 +1758,2310 @@ h2 {
 
 ## 列表相关属性
 
+列表相关属性见下表，只可以作用在 `ul`、`ol`、`li` 元素上。
+
+|        属性名         |        作用        |                            属性值                            |
+| :-------------------: | :----------------: | :----------------------------------------------------------: |
+|   `list-style-type`   |    设置列表符号    | `none` 不显示列表符号<br />`square` 实心方块<br />`disc` 圆形<br />`decimal` 数字<br />`lower-roman` 小写罗马字<br />`upper-roman` 大写罗马字<br />`lower-alpha` 小写字母<br />`upper-alpha` 大写字母 |
+| `list-style-position` | 设置列表符号的位置 |      `inside` 在 `li` 里边<br />`outside` 在 `li` 外边       |
+|  `list-style-image`   |   自定义列表符号   |                       `url(图片地址)`                        |
+|     `list-style`      |    列表复合属性    |          上述三个属性的复合属性，没有数量和顺序要求          |
+
+```css
+list-style-type: decimal;
+list-style-position: inside;
+list-style-image: url("../images/haha.png");
+list-style: decimal inside url("../images/haha.png");
+```
+
 ## 边框相关属性
+
+边框相关属性见下表，可以用在**很多元素**上。
+
+|     属性名     |     作用     |                            属性值                            |
+| :------------: | :----------: | :----------------------------------------------------------: |
+| `border-width` |   边框宽度   |                        CSS 中的长度值                        |
+| `border-color` |   边框颜色   |                        CSS 中的颜色值                        |
+| `border-style` |   边框风格   | `none` 默认值<br />`solid` 实线<br />`dashed` 虚线<br />`dotted` 点线<br />`double` 双实线 |
+|    `border`    | 边框复合属性 |          上述三个属性的复合属性，没有数量和顺序要求          |
+
+```css
+border-width: 2px;
+border-color: green:
+border-style: solid;
+border: 2px green solid;
+```
 
 ## 表格独有属性
 
+表格独有属性见下表，只有 `table` 标签才能使用。
+
+|      属性名       |         作用         |                            属性值                            |
+| :---------------: | :------------------: | :----------------------------------------------------------: |
+|  `table-layout`   |      设置列宽度      | `auto` 默认值，表示根据内容自动计算列宽<br />`fixed` 表示固定列宽，均分 |
+| `border-spacing`  |      单元格间距      |        CSS 中的长度值（生效前提：单元格边框不能合并）        |
+| `border-collapse` |    合并单元格边框    |      `collapse` 合并<br />`seperate` 默认值，表示不合并      |
+|   `empty-cells`   | 隐藏没有内容的单元格 | `show` 默认值，表示显示<br />`hide` 表示隐藏<br />（生效前提：单元格边框不能合并） |
+|  `caption-side`   |   设置表格标题位置   |      `top` 默认值，表示在上面<br />`bottom` 表示在下边       |
+
+```css
+table-layout: fixed;
+border-spacing: 50px;
+border-collapse: collapse;
+empty-cells: hide;
+caption-side: top;
+```
+
 ## 背景相关属性
+
+背景相关属性见下表，
+
+|        属性名         |       作用       |                            属性值                            |
+| :-------------------: | :--------------: | :----------------------------------------------------------: |
+|  `background-color`   |   设置背景颜色   |         CSS 中的颜色值，默认为 `transparent`，即透明         |
+|  `background-image`   |   设置背景图片   |                       `url(图片地址)`                        |
+|  `background-repeat`  | 设置背景重复方式 | `repeat` 默认值，表示背景图重复铺满整个元素；<br />`repeat-x` 表示只在水平方向重复<br />`repeat-y` 表示只在垂直方向重复<br />`no-repeat` 表示不重复 |
+| `background-position` |  设置背景图位置  |    要么通过**关键字**设置位置；要么通过**坐标值**指定位置    |
+|     `background`      |     复合属性     |         上述四个个属性的复合属性，没有数量和顺序要求         |
+
+- 背景图片如果太大，则会选择一部分填充元素；如果太小，则会通过重复填充元素
+- 关于背景图位置的设置
+  - **关键字**：**两个**用**空格**隔开的**关键字**，一个控制水平方向上的位置，一个控制垂直方向上的位置
+    - 水平位置关键字：`left`、`center`、`right`
+    - 垂直位置关键字：`top`、`center`、`bottom`
+    - 注：如果只写一个关键字，则默认另一个位置的关键字取值为 `center`（例如 `center` 表示中间，`left` 表示水平左边垂直中间，`right` 表示水平右边垂直中间，`top` 表示水平中间垂直上边，`bottom` 表示水平中间垂直下边）
+  - **坐标值**：以元素的左上角为原点，上边框为 x 轴，下边框为 y 轴建立坐标系；在坐标系中设置要填充的左上角的位置，分别是 x 值和 y 值，单位是 CSS 中的长度单位
+    - 注：第一个数字表示 x 坐标取值，第二个数字表示 y 坐标的取值，如果只写一个数字，则会被认为是 x 坐标，y 坐标取值 `center` 
+- 关于复合属性的使用注意点：复合属性（`background`）中，如果不设置 `background-color` 的值，其实是默认设置了是 `transparent` 的取值，因此如果在 `background` 上边已经设置了 `background-color` 的话，此时背景颜色会被覆盖为透明色
+
+```css
+background-color: skyblue;
+background-image: url("../images/haha.png");
+background-repeat: no-repeat;
+background-position: center;
+background: url("../images/haha.png") no-repeat center;
+/* 此时的背景色为透明色，因为 background 中如果么有设置背景色的话，自动认为设置了 transparent */
+```
 
 ## 鼠标相关属性
 
+鼠标相关属性见下表，如果给某个元素设置了该属性后，当鼠标光标进入该元素范围后，就会改变样式。
+
+|  属性名  |        作用        |                            属性值                            |
+| :------: | :----------------: | :----------------------------------------------------------: |
+| `cursor` | 设置鼠标光标的样式 | `pointer` 小手<br />`move` 移动图标<br />`text` 文字选择器<br />`crosshair` 十字架<br />`wait` 等待<br />`help` 帮助 |
+
+**自定义鼠标光标**：`cursor("../arrow.png"), pointer`
+
 ## 常用长度单位
+
+| 单位  |                      含义                       |
+| :---: | :---------------------------------------------: |
+| `px`  |                      像素                       |
+| `em`  | 相对于当前元素或其祖先元素的 `font-size` 的倍数 |
+| `rem` |   相对于根元素（`html`）的 `font-size` 的倍数   |
+|  `%`  |         相对于其父元素对应属性的百分比          |
+
+- `indent` 属性可以直接使用 `2em` 实现首行缩进两个文字
+
+```css
+width: 10em; /* 当前元素的宽度是其字体大小的十倍 */
+height: 10rem; /* 当前元素的高度是根元素字体大小的十倍 */
+font-size: 150%; /* 当前元素的字体大小是其父元素字体大小的 1.5 倍 */
+```
 
 ## 元素的显示模式
 
+1. **元素的显示模式**：**块元素、行内元素、行内块元素**，具体区别见下表。
+
+   |                       块元素 block                       |                       行内元素 inline                        |                   行内块元素 inline-block                    |
+   | :------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |                       又称块级元素                       |                         又称内联元素                         |                        又称内联块元素                        |
+   | 在页面中**独占一行**，不与任何元素共用一行，从上到下排列 | 在页面中**不独占一行**，一行中无法容纳下的行内元素，会在下一行继续从左到右排列 | 在页面中**不独占一行**，一行中无法容纳下的行内块元素，会在下一行继续从左到右排列 |
+   |                  默认宽度**撑满父元素**                  |                    默认宽度**由内容撑开**                    |                    默认宽度**由内容撑开**                    |
+   |                  默认高度**由内容撑开**                  |                    默认高度**由内容撑开**                    |                    默认高度**由内容撑开**                    |
+   |                **可以**通过 CSS 设置宽高                 |                  **无法**通过 CSS 设置宽高                   |                  **可以**通过 CSS 设置宽高                   |
+
+2. 常用元素的显示模式总结
+
+   |                     块元素 block                     |               行内元素 inline               |         行内块元素 inline-block          |
+   | :--------------------------------------------------: | :-----------------------------------------: | :--------------------------------------: |
+   |               主体结构标签 html、body                |                                             |               图片标签 img               |
+   |           排版标签 h1-h6、hr、p、pre、div            | 文本标签 br、em、strong、sup、sub、del、ins |            单元格标签 td、th             |
+   |           列表标签 ul、ol、li、dl、dt、dd            |                  a、label                   | 表单控件 input、textarea、select、button |
+   | 表格相关标签 table、tbody、thead、tfoot、tr、caption |                                             |             框架标签 iframe              |
+   |              表单相关标签 form、option               |                                             |                                          |
+
+3. **修改**元素的显示模式：通过 `display` 属性可以修改元素的默认显示模式。
+
+   |     属性值     |           作用           |
+   | :------------: | :----------------------: |
+   |     `none`     |       元素会被隐藏       |
+   |    `block`     |  元素将作为块级元素显示  |
+   |    `inline`    |  元素将作为内联元素显示  |
+   | `inline-block` | 元素将作为行内块元素显示 |
+
 ## 盒子模型
+
+### 组成
+
+1. 盒子模型：CSS 把所有的 HTML 元素都看成一个**盒子**，所有的样式也都是基于这个盒子。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240315233302495.png" alt="image-20240315233302495" style="width: 40%; display: block; margin: 0 auto;" />
+
+2. 盒子模型的组成
+
+   - **外边距** margin：盒子与外界的距离
+   - **边框** border：盒子的边框
+   - **内边距** padding：紧贴内容的补白区域
+   - **内容** content：元素中的文本或后代元素
+
+3. 注意事项
+
+   - 盒子的宽度 = 内容（content） + 左右内边距（padding） + 左右边框（border）
+   - 外边距（margin）不会影响盒子的大小，但是会影响盒子的位置
+
+```css
+width: 400px; /* 内容区的宽 */
+height: 400px; /* 内容区的高 */
+padding: 20px; /* 设置内边距 */
+border: 10px solid transparent; /* 设置边框 */
+margin: 10px; /* 设置外边距 */
+```
+
+### 内容区
+
+> 视图：`body` 标签铺满了整个浏览器的视图
+
+盒子模型的内容区共涉及了**两类**（**宽度和高度**），六个属性。
+
+|    属性名    |         作用         | 属性值 |
+| :----------: | :------------------: | :----: |
+|   `width`    |   设置内容区的宽度   |  长度  |
+| `max-width`  | 设置内容区的最大宽度 |  长度  |
+| `min-width`  | 设置内容区的最小宽度 |  长度  |
+|   `height`   |   设置内容区的高度   |  长度  |
+| `max-height` | 设置内容区的最大高度 |  长度  |
+| `min-height` | 设置内容区的最小高度 |  长度  |
+
+- 三个宽度属性一般不一起使用，三个高度属性也一般不一起使用
+
+### 默认宽度
+
+1. 默认宽度：不设置 `width` 属性时，元素呈现出来的宽度
+2. 总宽度 = 父元素的内容区宽度（content） - 自身左右的外边距（margin）
+3. 内容区宽度 = 父元素的内容区宽度（content） - 自身左右的外边距（margin） - 自身左右的边框（border） - 自身左右的内边距（padding）
+
+### 内边距
+
+盒子模型的内边距共涉及了五个属性，八种用法。
+
+|      属性名      |   作用   |    属性值    |
+| :--------------: | :------: | :----------: |
+|  `padding-top`   | 上内边距 |     长度     |
+| `padding-right`  | 右内边距 |     长度     |
+| `padding-bottom` | 下内边距 |     长度     |
+|  `padding-left`  | 左内边距 |     长度     |
+|    `padding`     | 复合属性 | 四种使用方式 |
+
+- `padding` 属性的四种使用规则
+
+  |         属性名:属性值          |                             作用                             |
+  | :----------------------------: | :----------------------------------------------------------: |
+  |         `padding:10px`         |                 四个方向的内边距都是 `10px`                  |
+  |      `padding: 10px 20px`      |         **上下**内边距 `10px`，**左右**内边距 `20px`         |
+  |   `padding: 10px 20px 30px`    |     上内边距 `10px`，左右内边距 `20px`，下内边距 `30px`      |
+  | `padding: 10px 20px 30px 40px` | 上内边距 `10px`，右内边距 `20px`，下内边距 `30px`，左内边距 `40px` |
+
+- `padding` 的取值不能是负数
+
+- **行内元素**的左右边距可以完美设置，但是上下内边距的设置存在问题（会出现不占位的问题）
+
+- **块级元素**和**行内块元素**的四个方向的内边距都可以完美设置
+
+### 边框
+
+盒子模型的边框共涉及了五类，二十个属性。
+
+|        属性名         |                     作用                     |                            属性值                            |
+| :-------------------: | :------------------------------------------: | :----------------------------------------------------------: |
+|    `border-style`     |       复合属性，指定四个方向的边框风格       | `none` 默认值，表示什么也没有<br />`solid` 表示实线<br />`dashed` 表示虚线<br />`dotted` 表示点线<br />`double` 表示双实线<br />（类同于 `padding` 也有四种使用方式） |
+|    `border-width`     |       复合属性，指定四个方向的边框宽度       | 长度，默认 `3px`<br />（类同于 `padding` 也有四种使用方式）  |
+|    `border-color`     |       复合属性，指定四个方向的边框颜色       |  颜色，默认黑色<br />（类同于 `padding` 也有四种使用方式）   |
+|       `border`        | 复合属性，指定四个方向的边框风格、宽度、颜色 | 风格、宽度、颜色（风格一定要指定，其他两个可选；三个值的顺序任意）（只能同时指定四个方向的边框） |
+|  `border-left-style`  |                设置左边框风格                |                             同上                             |
+|  `border-left-width`  |                设置左边框宽度                |                             同上                             |
+|  `border-left-color`  |                设置左边框颜色                |                             同上                             |
+|     `border-left`     |    复合属性，设置左边框的风格、宽度、颜色    |                             同上                             |
+| `border-right-style`  |                设置右边框风格                |                             同上                             |
+| `border-right-width`  |                设置右边框宽度                |                             同上                             |
+| `border-right-color`  |                设置右边框颜色                |                             同上                             |
+|    `border-right`     |    复合属性，设置右边框的风格、宽度、颜色    |                             同上                             |
+|  `border-top-style`   |                设置上边框风格                |                             同上                             |
+|  `border-top-width`   |                设置上边框宽度                |                             同上                             |
+|  `border-top-color`   |                设置上边框颜色                |                             同上                             |
+|     `border-top`      |    复合属性，设置上边框的风格、宽度、颜色    |                             同上                             |
+| `border-bottom-style` |                设置下边框风格                |                             同上                             |
+| `border-bottom-width` |                设置下边框宽度                |                             同上                             |
+| `border-bottom-color` |                设置下边框颜色                |                             同上                             |
+|    `border-bottom`    |    复合属性，设置下边框的风格、宽度、颜色    |                             同上                             |
+
+### 外边距
+
+盒子模型的外边距共涉及五个属性，八种用法，类同内边距。
+
+|     属性名      |   作用   |            属性值            |
+| :-------------: | :------: | :--------------------------: |
+|  `margin-top`   | 上外边距 |             长度             |
+| `margin-right`  | 右外边距 |             长度             |
+| `margin-bottom` | 下外边距 |             长度             |
+|  `margin-left`  | 左外边距 |             长度             |
+|    `margin`     | 复合属性 | 四种使用方式，类同 `padding` |
+
+### 关于 margin 的进一步讨论（day6|123p：46.2%）
+
+1. `margin` 的注意事项
+
+   - 子元素的 `margin` 是参考父元素的 `content` 计算的（子元素的盒子模型包含在父元素的内容区）
+
+     > 这里我们理解：盒子模型=外边距+边框+内边距+内容区；盒子=边框+内边距+内容区
+
+   - 块级元素和行内块元素可以完美设置四个方向的 `margin`；但是行内元素，只能完美设置其左右的 `margin`，上下的 `margin` 设置无效（类似 `padding`）
+
+   - 给块级元素设置 `margin: 0 auto`（即左右 `margin` 为 `auto`），表示该块级元素在父元素中水平居中
+
+   - `margin` 可以取负值
+
+2. `margin` 塌陷问题：给父元素中的第一个子元素设置上边距 or 最后一个子元素设置下外边距，此时外边距会被父元素“抢走”，也就是成为了父元素的外边距。该问题是一个历史遗留问题。
+
+   - 解决方式1（not good）：给父元素添加不为零的 `border` 属性
+   - 解决方式2（not good）：给父元素添加不为零的 `padding` 属性
+   - 解决方式3：给父元素设置样式 `overflow: hidden`
+
+3. `margin` 合并问题：上下相邻的两个元素，上面的元素的下外边距和下面的元素的上外边距会合并，此时这两个盒子之间的距离为 `max{上边元素的下外边距，下边元素的上外边距}`。这个问题无需解决。
+
+## 内容溢出的处理
+
+当我们在固定大小的 `div` 中填充过多的文本之后，就会产生溢出现象，具体可通过 `overflow` 属性处理。
+
+|    属性名    |            作用            |                            属性值                            |
+| :----------: | :------------------------: | :----------------------------------------------------------: |
+|  `overflow`  |   设置溢出内容的处理方式   | `visible` 默认值，表示显示溢出内容<br />`hidden` 表示隐藏溢出内容<br />`scroll` 表示显示滚动条，无论内容是否溢出<br />`auto` 表示自动设置，当内容溢出时显示滚动条，不溢出则不显示 |
+| `overflow-x` | 设置水平溢出内容的处理方式 |                        同 `overflow`                         |
+| `overflow-y` | 设置垂直溢出内容的处理方式 |                        同 `overflow`                         |
+
+- `overflow-x` 和 `overflow-y` 不可以一个是 `hidden` 一个是 `visible`
+- `overflow-x` 和 `overflow-y` 都是实验性属性，不建议使用
+- `overflow` 常用的属性值是 `hidden` 和 `auto`，除了可以处理溢出的显示方式之外，还可以**解决许多疑难杂症**（比如 `margin` 塌陷问题）
+
+## 元素的隐藏
+
+让元素隐藏有两种属性可以实现：`visibility` 和 `display`，二者的区别就是，`visibility` 隐藏元素后，元素看不见了，但是还会占有原来的位置；`display` 隐藏元素后，是彻彻底底地隐藏，不但看不见，也不占用任何位置。
+
+|    属性名    |        作用        |                            属性值                            |
+| :----------: | :----------------: | :----------------------------------------------------------: |
+| `visibility` | 隐藏元素（仍占位） |    `show` 默认值，表示显示元素<br />`hidden` 表示隐藏元素    |
+|  `display`   | 隐藏元素（不占位） | `none` 表示隐藏元素<br />`block` 表示将元素作为块级元素显示<br />`inline` 表示将元素作为内联元素显示<br />`inline-block` 表示将元素作为行内块元素显示 |
+
+## 样式的继承
+
+1. 样式的继承：有些样式是元素可以从祖先元素那里继承的，如果元素本身设置了某个样式，就是用本身设置的样式；如果元素本身没有设置某个样式，就会**优先继承离得近的祖先元素的对应样式**。
+
+2. 继承和不继承的 CSS 属性
+
+   |             继承的 CSS 属性             |     不继承的 CSS 属性      |
+   | :-------------------------------------: | :------------------------: |
+   |                字体属性                 | 边框、内边距、外边距、宽高 |
+   | 文本属性<br />（除了 `vertical-align`） |            背景            |
+   |                文字颜色                 |          溢出方式          |
+   |                   ...                   |            ...             |
+
+   - 能继承的属性，都是**不影响布局**的，即和盒子模型没有关系
+
+## 元素的默认样式
+
+1. 我们可以通过开发者工具看到一个元素的**默认样式、外部样式、行内样式、内联样式、继承样式**等信息。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316160829886.png" alt="image-20240316160829886" style="width: 60%; display: block; margin: 0 auto" />
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316161216222.png" alt="image-20240316161216222" style="width: 50%; display: block; margin: 0 auto" />
+
+2. 元素一般都有一些默认样式，从优先级的角度来考虑：**元素默认样式 > 元素继承的样式**，因此如果要修改元素的默认样式，一定要通过选择器直接选择该元素。
+
+   |    元素    |                           默认样式                           |
+   | :--------: | :----------------------------------------------------------: |
+   |    `a`     |                  下划线；字体颜色；鼠标小手                  |
+   | `h1`-`h6`  |                文字加粗、文字大小、上下外边距                |
+   |    `p`     |                          上下外边距                          |
+   | `ul`、`ol` |                           左内边距                           |
+   |   `body`   | 四周 `8px` 的外边距<br />（解释了为什么 `body` 没有铺满整个浏览器视口） |
+
+## 布局小技巧
+
+[16-三种布局练习](./CODES/16-三种布局练习.html)
+
+1. 三种布局效果的实现
+
+   - 效果一：内 `div` 在外 `div` 中居中；内 `div` 中的文字在内 `div` 中居中
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316162610612.png" style="width:40%; display: block; margin: 0 auto" />
+
+     ```html
+     <div class="outer">
+     		<div class="inner">Hello World</div>
+     </div>
+     ```
+
+     ```css
+     .outer {
+         width: 200px;
+         height: 200px;
+     
+         background-color: gray;
+     
+         overflow: hidden;
+     }
+     
+     .inner {
+         width: 100px;
+         height: 100px;
+     
+         background-color: pink;
+     
+         margin: 0 auto;
+         /* 实现块元素在块元素中的水平居中 */
+         margin-top: 50px;
+         /* 实现块元素在块元素中的垂直居中（在父元素中搭配 overflow: hidden 使用） */
+     
+         text-align: center;
+         /* 实现文本水平对齐 */
+         line-height: 100px;
+         /* 实现（单行）文本的垂直对齐 */
+     }
+     ```
+
+   - 效果二：内 `span` 在外 `div` 中居中
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316165324390.png" alt="image-20240316165324390" style="width:40%; display: block; margin: 0 auto" />
+
+     ```html
+     <div class="outer2">
+     	<span class="inner2">Hello World</span>
+     </div>
+     ```
+
+     ```css
+     .outer2 {
+         width: 200px;
+         height: 200px;
+     
+         background-color: gray;
+     
+         text-align: center;
+         /* 实现块元素中的行内元素水平居中 */
+         line-height: 200px;
+         /* 实现块元素中的行内元素（单行内容）垂直居中 */
+     }
+     
+     .inner2 {
+         background-color: pink;
+     }
+     ```
+
+   - 效果三：`span` 和 `img` 在块元素 `div` 中居中
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316170318447.png" alt="image-20240316170318447" style="width:40%; display: block; margin: 0 auto" />
+
+     ```html
+     <div class="outer3">
+         <span class="inner3">Hello World</span><img src="./two-levels-up/托马生日图.jpg" alt="生日贺图">
+     </div>
+     ```
+
+     ```css
+     .outer3 {
+         width: 200px;
+         height: 200px;
+     
+         background-color: gray;
+     
+         font-size: 0px;
+     
+         text-align: center;
+         line-height: 200px;
+     
+     
+     }
+     
+     .inner3 {
+         background-color: pink;
+         vertical-align: middle;
+         font-size: 16px;
+     }
+     
+     img {
+         width: 50px;
+         vertical-align: middle;
+     }
+     ```
+
+2. 布局技巧总结 
+
+   - **行内元素、行内块元素**可以被父元素当作**文本**处理
+     - 可以像处理文本对齐一样，去处理行内、行内块元素的对齐
+     - 可以在父元素中使用 `text-align: center` 让行内元素和行内块元素在父元素中水平居中
+     - 可以在父元素中使用 `text-align=line-height` 让行内元素和行内块元素在父元素中垂直居中
+     - 类似的，也可以在父元素中使用 `text-indent` 属性，给行内元素和行内块元素设置缩进
+   - 如何让子元素在父元素中**水平居中** <span id="2403220047"></span>
+     - 子元素为块元素：子元素加上 `margin: 0 auto`
+     - 子元素为行内元素或行内块元素：父元素加上 `text-align: center`
+   - 如何让子元素在父元素中**垂直居中**
+     - 子元素为块元素：子元素加上 `margin-top: (父元素的 content - 子元素的盒子高度) ÷ 2`
+     - 子元素为行内元素或行内块元素：让父元素的 `line-height` 等于其 `height`；每个子元素都加上 `vertical-align: middle`（如果想要绝对，垂直居中，需要设置父元素的 `font-size: 0`）
+
+## 元素之间的空白问题
+
+1. 元素之间的空白问题：行内元素、行内块元素，彼此之间的**换行和空格**会被浏览器解析为一个空白字符。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316173623648.png" alt="image-20240316173623648" style="width:60%; display: block; margin: 0 auto" />
+
+2. 空白解决方式
+
+   - 方式一：源代码中去除换行和空格（不推荐）
+   - 方式二：父元素中设置 `font-size: 0`，再在要显示文字的子元素中，单独设置字体大小（推荐）
+
+## 行内块的幽灵空白问题
+
+1. 行内块的幽灵空白问题：**行内块元素**与父元素的文本默认进行**基线对齐**，而文本的基线与文本最底部之间是有一定距离的。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316175007080.png" alt="image-20240316175007080" style="width:40%; display: block; margin: 0 auto" />
+
+2. 空白解决方式
+
+   - 方式一：给行内块设置 `vertical-align=middle/bottom/top`（调整 `top` 文字会往上跑，调整 `bottom` 文字会往下跑，调整 `middle` 文字会往中间跑）
+   - 方式二：若果父元素只有一张照片，则设置图片 `display: block`（因为块级元素不涉及这种空白问题）
+   - 方式三：给父元素设置 `font-size: 0`，如果该行内还有文本，则需要单独设置 `font-size`
+
+## 浮动
+
+### 浮动的简介及特点
+
+[17-浮动小练习](./CODES/17-浮动小练习.html)
+
+1. 什么是浮动？浮动**最初**用于实现**文字环绕图片**效果，现在作为一种**页面布局**的方式，用于控制元素在页面上的位置。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316204515981.png" alt="image-20240316204515981" style="width:50%; display: block; margin: 0 auto" />
+
+2. 浮动怎么实现？通过 `float` 属性实现浮动：`left` 表示向左浮动，`right` 表示向右浮动，`none` 是默认值，表示不浮动。
+
+3. **文档流**：HTML 中元素排列和布局的基本规则，如块级元素会独占一行或一块区域，从上至下排列，而行内元素则在同一行内按照它们的出现顺序排列。（可以理解文档流就是没有浮动的元素处于的那个层级、地面；浮动的元素相当于进入了一个更高的层级，physically）
+
+4. 浮动的形象示例
+
+   |                             描述                             |                             平面                             |                             三维                             |
+   | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |              起初：三个块元素依次放置在文档流中              | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316204925515.png" alt="image-20240316204925515" style="width: 70%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316204930305.png" alt="image-20240316204930305" style="width: 70%;" /> |
+   |    第二个块元素浮动，此时其他两个块元素依次放置在文档流中    | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316205002714.png" alt="image-20240316205002714" style="width: 70%;" /> | <img src="C:\Users\15787\AppData\Roaming\Typora\typora-user-images\image-20240316205017654.png" alt="image-20240316205017654" style="width: 70%;" /> |
+   |      第二个和第三个块元素浮动，第一个元素放置在文档流中      | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316205158517.png" alt="image-20240316205158517" style="width: 70%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316205205657.png" alt="image-20240316205205657" style="width: 70%;" /> |
+   |                                                              |                                                              |                                                              |
+   | 起初：三个块元素（盒子）依次放置在一个块元素的父元素中，且都在文档流中 | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316210529009.png" alt="image-20240316210529009" style="width: 50%;" /> |                                                              |
+   |                         盒子一右浮动                         | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316210709047.png" alt="image-20240316210709047" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316210715871.png" alt="image-20240316210715871" style="width: 70%;" /> |
+   |                         盒子一左浮动                         | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316210934523.png" alt="image-20240316210934523" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316210904749.png" alt="image-20240316210904749" style="width: 70%;" /> |
+   |                        所有盒子左浮动                        | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211059814.png" alt="image-20240316211059814" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211016754.png" alt="image-20240316211016754" style="width: 70%;" /> |
+   |                 所有盒子左浮动，盒子三落下来                 | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211613394.png" alt="image-20240316211613394" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211323058.png" alt="image-20240316211323058" style="width: 70%;" /> |
+   |            所有盒子左浮动，盒子三落下来但是被卡住            | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211853313.png" alt="image-20240316211853313" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316211859993.png" alt="image-20240316211859993" style="width: 70%;" /> |
+
+### 元素浮动后的特点
+
+1. 元素**脱离文档流**
+2. 不管浮动前是什么元素，**浮动后默认宽与高都是被内容撑开**，同时也**可以设置宽高**
+3. **不会独占一行**，可以与其他元素共用一行
+4. 不会 `margin` 合并，也不会 `margin` 坍塌
+5. **能够**完美设置四个方向的 `margin` 与 `padding`**
+6. 不会像行内块一样被当作文本处理
+
+### 浮动产生的影响
+
+1. 影响一（对兄弟元素的影响）：当元素浮动后，**后边的兄弟元素会占据浮动元素之前的位置**，处于浮动元素的下边（文档流中）；对前边的兄弟元素无影响。
+2. 影响二（对父元素的影响）：**浮动元素无法撑起父元素的高度**，导致父元素**高度塌陷**；但是此时父元素的**宽度依然束缚着浮动的元素**。
+
+### 浮动影响的解决方式
+
+总共有五种方式解决浮动产生的影响，方案及相对的优缺点见下表。
+
+| 序号 |                             方案                             |                             限制                             |
+| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   |                       给父元素指定高度                       |  可以解决父元素高度塌陷的问题（影响二）；但是没有解决影响一  |
+|  2   |                      给父元素也设置浮动                      |        类同上；此时的副作用：父元素的兄弟元素会顶上来        |
+|  3   |               给父元素设置 `overflow: hidden`                |   可以解决影响一和影响二；但是：要求全部兄弟元素都是浮动的   |
+|  4   | 在所有浮动元素的最后边，添加一个块级元素，并给该块级元素设置 `clear: both` | 可以解决影响一和影响二；但是：要求这个新加的块级元素前边的元素都是浮动元素，且这个新加的块级元素不能是浮动元素，且这个新加的块级元素是块元素或行内块元素 |
+|  5   |   给浮动元素的父元素设置伪元素，通过伪元素清除浮动（推荐）   |                 同上，方案五是对方案四的改进                 |
+
+- 方案五设置伪元素的代码如下
+
+  ```css
+  .parent::after {
+      content: "";
+      disply: block;
+      clear: both
+  }
+  ```
+
+- **布局原则**：设置浮动的时候，兄弟元素要么全都浮动，要么全都不浮动
+
+### 浮动布局练习
+
+[18-浮动布局练习](./CODES/18-浮动布局练习.html)
+
+1. 要求效果
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316230416175.png" alt="image-20240316230416175" style="width:70%; display: block; margin: 0 auto" />
+
+2. 数据标注
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316230459900.png" alt="image-20240316230459900" style="width:70%; display: block; margin: 0 auto" />
+
+3. 问题分析
+
+   - container（页面的祖先元素：设置整个页面的最大宽度、居中整个页面、默认文本居中）
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316230647118.png" alt="image-20240316230647118" style="width:70%; display: block; margin: 0 auto" />
+
+   - page-header、menu、content、footer
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316231011272.png" alt="image-20240316231011272" style="width:70%; display: block; margin: 0 auto" />
+
+   - left、right
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316231149358.png" alt="image-20240316231149358" style="width:70%; display: block; margin: 0 auto" />
+
+   - top、bottom
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240316231255302.png" alt="image-20240316231255302" style="width:70%; display: block; margin: 0 auto" />
+
+   - 其中，header 里边的三个块元素、content 里边的 left 和 right、top 里边的两个块元素、bottom 里边的四个块元素 都是浮动元素；注意要在浮动元素的块元素上进行浮动影响的消除
+
+## 定位（day7|139p：53.3%）
+
+### 相对定位
+
+1. 如何设置相对定位？通过给元素设置 `position: relative` 即可以实现相对定位。（step1）
+
+2. 如何利用相对定位调整位置？通过给元素设置 `left`、`right`、`top`、`bottom` 四个属性调整位置，属性取值为长度。（step2）
+
+3. **相对定位**：指的是元素**相对于自己原来的位置**改变位置。
+
+4. 相对定位的特点
+
+   - 相对定位的元素**不会脱离文档流**，元素位置的变化，只是视觉效果上的变化，不会对其他元素产生任何影响
+
+     |                          相对定位前                          |                          相对定位后                          |
+     | :----------------------------------------------------------: | :----------------------------------------------------------: |
+     | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134711811.png" alt="image-20240317134711811" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134752860.png" alt="image-20240317134752860" style="width: 50%;" /> |
+     | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134720728.png" alt="image-20240317134720728" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134734584.png" alt="image-20240317134734584" style="width: 50%;" /> |
+
+   - 相对定位的元素的**显示层级**比普通元素高；各种定位的元素的显示层级都是一样的
+
+     - 定位的元素会覆盖在普通元素之上
+     - 如果两个元素都发生定位，则后定位的元素会覆盖在先定位的元素之上
+     - 注：区分浮动和定位浮动的元素脱离文档流，但是定位的元素没有脱离文档流
+
+   - `left` 和 `right` 属性不能一起设置；`top` 和 `bottom` 属性不能一起设置
+
+   - 相对定位的元素，也能继续浮动，也能通过 `margin` 调整位置，但是**不推荐**这样做
+
+5. 相对定位的应用场景
+
+   - 对元素位置进行微调
+   - 和绝对定位配合使用
+
+### 绝对定位
+
+1. 如何设置绝对定位？通过给元素设置 `position: absolute` 即可以实现绝对定位。（step1）
+
+2. 如何利用绝对定位调整位置？通过给元素设置 `left`、`right`、`top`、`bottom` 四个属性调整位置，属性取值为长度。（step2）
+
+3. **绝对定位**：指的是元素**参考自己的包含块**来改变位置。
+
+   > 包含块
+   >
+   > - 如果元素没有脱离文档流，**父元素**就是它的包含块
+   > - 如果元素脱离了文档流，**第一个拥有定位属性的祖先元素**就是它的包含块；如果所有祖先元素都没定位，那么包含块就是整个页面
+
+4. 绝对定位的特点
+
+   - 绝对定位的元素**脱离文档流**，对后面的兄弟元素、父元素都有影响
+
+     |                          绝对定位前                          |                          绝对定位后                          |
+     | :----------------------------------------------------------: | :----------------------------------------------------------: |
+     | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134711811.png" alt="image-20240317134711811" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317142330998.png" alt="image-20240317142330998" style="width:50%;" /> |
+     | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317134720728.png" alt="image-20240317134720728" style="width: 50%;" /> | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317142405981.png" alt="image-20240317142405981" style="width:33%;" /> |
+
+   - `left` 和 `right` 属性不能一起设置；`top` 和 `bottom` 属性不能一起设置
+
+   - 绝对定位和浮动**不能同时设置**，如果同时设置，浮动失效，**以定位为主**
+
+   - 绝对定位的元素，也可以通过 `margin` 调整位置，但是**不推荐这样做**；同时，只有设置了 `top` 属性，此时 `margin-top` 属性才生效，其他三个方向的 `margin` 类似
+
+   - 无论是什么元素（行内、行内块、块级）设置为绝对定位后，都变成了**定位元素**
+
+     > 定位元素：默认宽、高都被内容撑开；但可以自由设置宽高
+     >
+     > 例如：span 变成定位元素后，也可以设置宽高
+
+   - 绝对定位和相对定位配合使用：即给父元素设置相对定位，此时子元素绝对定位，父元素就是子元素的包含块
+
+5. 绝对定位的应用场景：将一个元素盖到另外一个元素身上，如京东的分类菜单栏。
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317143033267.png" alt="image-20240317143033267" style="width:80%;" />
+
+   ```css
+   /* 上述功能的一个简单实现 */
+   .parent {
+       position: relative;
+   }
+   
+   .child {
+       position: absolute;
+       transition: 1s all linear;
+   }
+   
+   .parent:hover .child {
+       left: 220px;
+   }
+   ```
+
+### 固定定位
+
+1. 如何设置固定定位？通过给元素设置 `position: fixed` 即可以实现固定定位。（step1）
+
+2. 如何利用固定定位调整位置？通过给元素设置 `left`、`right`、`top`、`bottom` 四个属性调整位置，属性取值为长度。（step2）
+
+3. **固定定位**：指的是元素**参考自己的视口**来改变位置。
+
+   > 视口（viewport）：对于浏览器，视口就是网页内容在浏览器中可见的区域大小。
+
+4. 固定定位的特点：和绝对定位完全相同。
+
+5. 固定定位的应用场景：网页小广告。
+
+### 粘性定位
+
+1. 如何设置粘性定位？通过给元素设置 `position: sticky` 即可以实现粘性定位。（step1）
+
+2. 如何利用粘性定位调整位置？通过给元素设置 `left`、`right`、`top`、`bottom` 四个属性调整滚动时粘住的位置，属性取值为长度。（step2）（最常用是 `top` 属性）
+
+3. 粘性定位：指的是元素参考**离它最近的一个拥有“滚动机制”的祖先元素**（即使这个祖先不是最近的真实可滚动的祖先）来粘住不动。
+
+   > 什么叫“即使这个祖先不是最近的真实可滚动的祖先”？例如：在开启了粘性定位元素的父元素中设置了 `overflow: scroll`，此时该子元素的参考位置就是它的父元素，因为该父元素拥有所谓的滚动机制，哪怕不能滚动（即不是真实可滚动的）
+
+4. 粘性定位的特点
+
+   - 粘性定位的元素**不会脱离文档流**，是一种专门用于窗口滚动时的新的定位方式
+   - 粘性定位最常用的是 `top` 属性
+   - 粘性定位的元素，也能继续浮动，也能通过 `margin` 调整位置，但是**不推荐**这样做
+   - 粘性定位和相对定位的特点基本一致，不同点在于，粘性定位可以在元素到达某个位置时将其固定，并且在其父元素离开对应位置时一起离开。
+
+### 定位的层级
+
+[19-定位的层级](./CODES/19-定位的层级.html)
+
+1. **定位元素的显示层级比普通元素高**
+2. **定位元素（无论什么定位）的显示层级都是一样的**
+3. 如果多个元素都是定位元素，且发生重叠，那么**后面的元素会显示在前面的元素之上**
+4. CSS 的 `z-index` 属性可以**调整定位元素的显示层级**
+   - `z-index` 的属性值是没有单位的数字，值越大，显示层级越高
+   - 只有定位元素设置 `z-index` 元素才有效
+   - 如果一个 `z-index` 大的定位元素，没有覆盖掉 `z-index` 小的定位元素，那么大概是因为这个 `z-index` 大的定位元素的父元素的缘故，因为父元素的 `z-index` 会影响其子元素的显示层级
+
+### 定位的一个注意点
+
+[20-绝对定位注意点](./CODES/20-绝对定位注意点.html)
+
+绝对定位的元素是越过其包含块的 `padding` 的，即当绝对定位的元素脱离文档流后，是在其包含块的 `padding` + `content` 范围内布局的。
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317164351986.png" alt="image-20240317164351986" style="width:50%;" />
+
+```html
+<div class="outer">
+    <div class="inner">
+    </div>
+</div>
+```
+
+```css
+.outer {
+    width: 400px;
+    height: 200px;
+    background-color: skyblue;
+    padding: 50px;
+    border: 5px black solid;
+    position: relative;
+}
+
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 5px red dotted;
+}
+```
+
+### 定位的特殊应用
+
+[21-定位的特殊应用1](./CODES/21-定位的特殊应用1.html)
+
+[22-定位的特殊应用1](./CODES/22-定位的特殊应用2.html)
+
+1. 注意
+
+   - 发生**固定定位、绝对定位**后，元素都变成了**定位元素**：默认宽高被内容撑开，且依然可以设置宽高
+   - 发生相对定位之后，元素依然是之前的显示模式（元素在文档流中的表现方式或布局方式，如块级元素、行内元素、行内块元素等）
+   - 以下所说的特殊应用，只针对**绝对定位**和**固定定位**的元素，不包括相对定位的元素。
+
+2. 特殊应用一：让（没有设置宽高的）定位元素充满包含块
+
+   - 定位元素的宽充满包含块 `left: 0; right: 0;`
+   - 定位元素的高充满包含块 `top: 0; bottom: 0;`
+   - 定位元素充满包含块 `left: 0; right: 0; top: 0; bottom: 0;`
+
+3. 特殊应用二：让（设置了宽高的）定位元素在包含块中居中
+
+   - 方式一（推荐）：设置 `left`、`right`、`margin` 可以水平居中；设置 `top`、`bottom`、`margin` 可以垂直居中；都设置则水平垂直居中 <span id="2403220038"></span>
+
+     ```css
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     ```
+
+   - 方式二 <span id="2403220039"></span>
+
+     ```css
+     top: 50%;
+     left: 50%;
+     margin-left: -(定位元素盒子宽的一半);
+     margin-top: -(定位元素盒子高的一半);
+     ```
+
+     > 注意：笔记中说盒子模型是包含外边距、边框、内边距、内容区的；如果只说盒子，则一般而言是在盒子模型的基础上，略去外边距。这里的**定位元素盒子的宽**=内容区 + 内边距 + 边框。
+
+## 布局
+
+### 版心
+
+- 网页的版心（container）是一个**固定宽度且水平居中**的盒子，用于显示网页的主要内容
+- 版心的宽度一般是 960~1200 像素之间
+- 版心可以是一个，也可以是多个
+
+### 常用类名
+
+|             类名             |        含义        |
+| :--------------------------: | :----------------: |
+|           `topbar`           |     顶部导航条     |
+|   `header`、`page-header`    |        页头        |
+| `nav`、`navigator`、`navbar` |        导航        |
+|    `search`、`search-box`    |       搜索框       |
+|           `banner`           | 横幅、广告、宣传图 |
+|      `content`、`main`       |      主要内容      |
+|      `aside`、`sidebar`      |       侧边栏       |
+|   `footer`、`page-footer`    |        页脚        |
+
+### 重置默认样式
+
+1. 为什么要重置默认样式？现在的网页设计更加复杂，默认样式会给页面绘制带来麻烦；默认样式在不同浏览器上呈现的效果不一样。
+2. 重置默认样式的方案一：全局选择器
+   - 开发中不会使用，可以在写一些 demo 时使用
+   - 为什么不会使用？`*` 选择的是所有元素，但是不是所有的元素都有默认样式；我们更希望重置默认样式时，做一些特殊处理，如更改 `a` 的颜色等
+3. 重置默认样式的方案二：reset.css
+   - 这种方式可以选择到具有默认样式的元素，**清空**其默认样式，此时的网页更像是“一张白纸”
+4. 重置默认样式的方案三：normalized.css
+   - 这种方式在清楚默认样式的基础上，**保留了一些有价值的默认样式**
+   - 官网：http://necolas.github.io/normalize.css
+   - 这种方式，相较于 reset.css，有以下优点
+     - 保留了有价值的默认样式，更加温和，而不是完全去掉
+     - 为大部分 HTML 元素提供了一般化样式
+     - 新增了对 HTML5 元素的设置
+     - 对并集选择器的使用比较谨慎，可以有效避免调试工具杂乱
+
+# PART4 尚品汇
+
+[尚品汇](./CODES/尚品汇)
+
+```html
+<!-- 引入页签图标 -->
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+<!-- 引入重置样式 -->
+<link rel="stylesheet" href="./css/reset.css">
+<!-- 引入样式 -->
+<link rel="stylesheet" href="./css/index.css">
+```
+
+## 顶部导航条
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317202731408.png" alt="image-20240317202731408" style="width:100%;" />
+
+- 首先用一个大的**盒子**，并放置一个**版心**
+  - 版心分为左侧的**欢迎区**和右侧的**导航区**，分别浮动于版心的左边和右边
+    - 欢迎区通过 `span` 和 `a` 的组合实现
+    - 导航区通过一个**无序列表**实现，其中无序列表的每一项就是对应的导航里的每一项
+      - 将所有列表项左浮动实现一行的导航内容
+
+## 头部
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317212340745.png" alt="image-20240317212340745" style="width:100%;" />
+
+- 首先用一个大的**盒子**，并放置一个**版心**
+  - 版心分为左侧的 **logo 区**和右侧的**搜索区**，分别浮动于版心的左边和右边
+    - logo 区域简单加一个图片即可
+    - 搜索区通过一个**表单**实现，包含一个**输入框**和一个**按钮**控件
+
+## 主导航
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240317220740918.png" style="width:100%;" />
+
+- 首先用一个大的**盒子**，并放置一个**版心**
+  - 版心分为左侧的**文字区**和右侧的**菜单区**，依次都浮动于版心的左边
+    - 文字区可以通过一个 `div` 简单实现
+    - 菜单区可以通过**无序列表**实现，然后将无序列表的全部子元素左浮
+
+## 内容区（day8|152p：61.4%）
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240318095531995.png" alt="image-20240318095531995" style="width:100%;" />
+
+- 首先用一个大的盒子，并放置一个版心
+  - 版心分为左侧的**导航区**、中间的**条幅区**和右侧的**其他区**，依次浮动于版心的左边
+    - 侧边导航可以通过一个**无序列表**实现，每个列表元素包含**超链接**和对应的**二级菜单**
+      - 二级菜单初始隐藏，当鼠标悬浮在对应的列表项区域，二级菜单通过绝对定位显示到正确的地方
+    - 条幅区可以通过一个 `div` 简单实现
+    - 其他区分为上边的**信息区**和下方的其他**导航区**
+      - 信息区域可以通过一个简单的 `div` 和**无序列表**实现
+      - 导航区可以通过三个**无序列表**实现
+
+## 秒杀区
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240318155241590.png" alt="image-20240318155241590" style="width:100%;" />
+
+## 楼层
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240318161548874.png" alt="image-20240318161548874" style="width: 100%;" />
+
+- 首先用一个大的盒子，并放置一个**版心**
+  - 版心分为上边的**导航区**和下边的**信息区**
+    - 导航区通过 `span` 左浮和 `ul` 右浮实现
+    - 信息区的五个大 `div` 通过左浮实现
+
+## 页脚
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240318171725512.png" alt="image-20240318171725512" style="width: 100%;" />
+
+- 首先用一个大的盒子，并放置一个**版心**
+  - 版心分为上边的**菜单区**、中间的**横线**和下边的**菜单区**
+    - 上边的菜单区可以通过 `ul` 联合浮动实现
+    - 下边的菜单区同理
+    - 中间的横线可以通过 `div` 实现
+
+# PART5 HTML5
+
+## 简介
+
+1. 概述：HTML5 是新一代的 HTML 标准，2014 年 10 月由万维网（W3C）完成标准制定。
+
+   > 广义上，HTML5 指的是整个前端；狭义上，HTML5 指的是新一代的 HTML 标准
+
+2. 优点
+
+   - 针对 JavaScript，新增了很多**可操作的接口**
+
+   - 新增了一些**语义化标签**、**全局属性**
+
+   - 新增了**多媒体标签**，很好替代 flash
+
+   - 更加侧重**语义化**，对 SEO 更友好
+
+   - 可移植性好，可以大量应用在移动设备上
+
+   - 支持 Chrome、Safari、Opera、Firefox 等主流浏览器
+
+     > IE 浏览器必须是 9 以上的版本才支持 HTML5，且 IE9 仅支持部分 HTML5 新特性
+
+## 新增布局标签
+
+|    标签名    |                             语义                             | 单/双 |
+| :----------: | :----------------------------------------------------------: | :---: |
+|   `header`   |                 整个页面或部分区域的**头部**                 |  双   |
+|   `footer`   |                 整个页面或部分页面的**底部**                 |  双   |
+|    `nav`     |                             导航                             |  双   |
+|  `article`   |             文章、帖子、杂志、新闻、博客、评论等             |  双   |
+|  `section`   |            页面或文章中的某段文字（通常包含标题）            |  双   |
+|   `aside`    |                            侧边栏                            |  双   |
+|  ~~`main`~~  |  文档的主要内容<br />（WHATWG 没语义；IE 不支持；几乎不用）  |  双   |
+| ~~`hgroup`~~ | 包裹连续的标题<br />（如文章的主标题、副标题的组合；被 W3C 删除） |  双   |
+
+- 这些标签没有什么特殊效果，强调的是其**语义**，相当于有语义的 `div`
+
+- `article` 与 `section` 有什么区别？
+
+  - `article` 里面可以有多个 `section`
+  - `section` 强调的是分段或分块，如果想将一块内容分成几段，可以使用 `section` 元素
+  - `article` 比 `section` 更强调独立性，一块内容如果比较独立、完整，则应该使用 `article` 元素
+
+  ```html
+  <article>
+      <h2>XXXXXXXXXXXXXX</h2>
+      <section>
+      	<h3>XXXXXXXXXXXXXX</h3>
+          <p>XXXXXXXXXXXXXXX</p>
+      </section>
+      <section>
+      	<h3>XXXXXXXXXXXXXX</h3>
+          <p>XXXXXXXXXXXXXXX</p>
+      </section>
+  </article>
+  ```
+
+  ```html
+  <aside>
+      <nav>
+          <ul>
+              <li><a href="#">XXXXXXXXX</a></li>
+              <li><a href="#">XXXXXXXXX</a></li>
+              <li><a href="#">XXXXXXXXX</a></li>
+          </ul>
+      </nav>
+  </aside>
+  ```
+
+## 新增状态标签
+
+[23-h5状态标签](./CODES/23-h5状态标签.html)
+
+|    标签    |                语义                | 单/双 |
+| :--------: | :--------------------------------: | :---: |
+|  `meter`   |  定义**已知范围**内的**标量**测量  |  双   |
+| `progress` | 显示某个**任务完成的进度**的指示器 |  双   |
+
+1. 第一种状态：`meter` 标签，又被称为 `gauge`（尺度），常用于表示**电量、磁盘用量**等。
+
+   |   属性    |  作用  | 取值 |
+   | :-------: | :----: | :--: |
+   |  `high`   |  高值  | 数值 |
+   |   `low`   |  低值  | 数值 |
+   |   `max`   | 最大值 | 数值 |
+   |   `min`   | 最小值 | 数值 |
+   | `optimum` | 最优值 | 数值 |
+   |  `value`  | 当前值 | 数值 |
+
+   - 使用情形一（两状态：安全、警告）
+
+     ```html
+     <meter max="100" min="0" value="90" low="10" high="20" optimum="15"></meter>
+     ```
+
+     - 当 $value \in [low, high]$，表示安全状态，此时显示绿色；否则表示警告状态，此时显示黄色
+
+   - 使用情形二（两状态：安全、警告、危险）
+
+     ```html
+     <meter max="100" min="0" value="90" low="10" high="20" optimum="90"></meter>
+     ```
+
+     - 当 $value \in [0, low)$，表示危险状态，此时显示红色；
+     - 当 $value\in[low,high)$，表示危险状态，此时显示黄色；
+     - 当 $value\in[high,max]$，表示安全状态，此时显示绿色
+
+   - 情形一和情形二的区别在于 `optimum` 所在空间的不同，其所在空间永远是安全的绿色区间
+
+   - 使用情形二就是手机电量的颜色的显示逻辑
+
+2. 第一种状态：`progress` 标签，一般用于表示进度条，如**工作完成进度**等。
+
+   |  属性   |  作用  | 取值 |
+   | :-----: | :----: | :--: |
+   |  `max`  | 目标值 | 数值 |
+   | `value` | 当前值 | 数值 |
+
+   ```html
+   <progress max="100" value="70"></progress>
+   ```
+
+## 新增列表标签
+
+[24-h5列表标签](./CODES/24-h5列表标签.html)
+
+|    标签    |                    语义                     | 单/双 |
+| :--------: | :-----------------------------------------: | :---: |
+| `datalist` |             搜索框的关键字提示              |  双   |
+| `details`  |    展示问题和答案，或对专有名词进行解释     |  双   |
+| `summary`  | 写在 `details` 里边，用于指定问题或专有名词 |  双   |
+
+1. 第一种列表：`datalist` & `option` 标签，需要将表单的 `list` 属性和 `datalist` 的 `id` 配合使用（`list` = `id`）。
+
+   ```html
+   <form action="#">
+       <input type="text" list="my-data">
+       <button>Search</button>
+   </form>
+   <datalist id="my-data">
+       <option value="周杰伦">周杰伦</option>
+       <option value="周冬雨">周冬雨</option>
+       <option value="马冬梅">马冬梅</option>
+       <option value="温兆伦">温兆伦</option>
+   </datalist>
+   ```
+
+2. 第二种列表：`details` & `summary` 标签。
+
+   ```html
+   <details>
+       <summary>A 开头的单词有哪些？</summary>
+       <p>Abandon</p>
+   </details>
+   ```
+
+## 新增文本标签
+
+[25-h5文本标签](./CODES/25-h5文本标签.html)
+
+|  标签  |             语义             | 单/双 |
+| :----: | :--------------------------: | :---: |
+| `ruby` |      包裹需要注音的文字      |  双   |
+|  `rt`  | 写在 `ruby` 里边，是注音内容 |  双   |
+| `mark` |          标记关键字          |  双   |
+
+1. 第一种文本（文本注音）：`ruby` & `rt` 标签，`rt` 里的注音对 `ruby` 的文字进行标注。
+
+   ```html
+   <ruby>
+       <span>你好世界</span>
+       <rt>ni hao shi jie</rt>
+   </ruby>
+   ```
+
+2. 第二种文本（文本标记）：`mark` 标签，用于标记搜索结果中的关键字。
+
+   ```html
+   <p>Lorem ipsum dolor sit <mark>amet</mark>, consectetur adipisicing elit. Accusamus reiciendis fuga incidunt nisi fugit ad ut saepe at a repellendus.</p>
+   ```
+
+## 新增表单控件属性
+
+[26-h5表单控件属性](./CODES/26-h5表单控件属性.html)
+
+|     属性名     |                             作用                             |
+| :------------: | :----------------------------------------------------------: |
+| `placeholder`  |         **提示文字**（适用**文字输入类**的表单控件）         |
+|   `required`   |          **必填项**（适用**除按钮外**其他表单控件）          |
+|  `autofocus`   |           **自动获取焦点**（适用**所有**表单控件）           |
+| `autocomplete` | **自动完成**（适用**文字输入类**表单控件，密码输入框、多行输入框不可用；可选值 `on` 或 `off`） |
+|   `pattern`    | **正则表达式**（适用**文本输入类**表单控件，多行输入框不可用） |
+
+- `pattern` 对于**空的输入框不会验证**，因而往往与 `required` 配合使用
+
+- `required` 对于单选框，表示必须选择一个；对于复选框，表示必须至少选择这个
+
+- `autocomplete=on` 属性的正确使用，可能需要打开浏览器中的以下设置
+
+  <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319000327966.png" alt="image-20240319000327966" style="width:80%;" />
+
+## 新增 input 标签 type 属性值
+
+[27-h5input-type属性值](./CODES/27-h5input-type属性值.html)
+
+下表为 `input` 标签的 `type` 属性 HTML5 中的新增属性值，用于实现不同功能。
+
+|      属性值      |                             作用                             |
+| :--------------: | :----------------------------------------------------------: |
+|     `email`      | **邮箱**类型输入框（表单提交时会验证格式，输入为空时不验证格式） |
+|      `url`       | **url** 类型的输入框（表单提交时会验证格式，输入为空时不验证格式） |
+|     `number`     | **数字**类型的输入框（表单提交时会验证格式，输入为空时不验证格式；还可以设置 `step`、`min`、`max` 属性，意思是步长、最低值、最大值） |
+|     `search`     |      **搜索**类型的输入框（表单提交时**不会**验证格式）      |
+|      `tel`       | **电话**类型的输入框（表单提交时**不会**验证格式，移动端输入时会唤起数字键盘） |
+|     `range`      | **范围**选择框（默认值为 50，表单提交时不会验证格式；还可以设置 `value`、`min`、`max` 属性，意思是初始值、最低值、最大值） |
+|     `color`      |    **颜色**选择框（默认值为黑色，表单提交时不会验证格式）    |
+|      `date`      |     **日期**选择框（默认值为空，表单提交时不会验证格式）     |
+|     `month`      |     **月份**选择框（默认值为空，表单提交时不会验证格式）     |
+|      `week`      |      **周**选择框（默认值为空，表单提交时不会验证格式）      |
+|      `time`      |     **时间**选择框（默认值为空，表单提交时不会验证格式）     |
+| `datetime-local` |   **时间日期**选择框（默认值为空，表单提交时不会验证格式）   |
+
+## 新增 form 标签属性
+
+|    属性值    |                      作用                      |
+| :----------: | :--------------------------------------------: |
+| `novalidate` | 表单提交时不再进行验证，此时所有的校验规则失效 |
+
+```html
+<form action="#" novalidate></form>
+```
+
+## 新增音视频标签
+
+|  标签   | 语义 | 双/单 |
+| :-----: | :--: | :---: |
+| `video` | 视频 |  双   |
+| `audio` | 音频 |  双   |
+
+1. 视频：`video` 标签
+
+   |   属性名   |                             作用                             |                            属性值                            |
+   | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |   `src`    |                           视频地址                           |                           url 地址                           |
+   |  `width`   |                       视频播放器的宽度                       |                            像素值                            |
+   |  `height`  |                       视频播放器的高度                       |                            像素值                            |
+   | `controls` |            向用户显示视频控件（播放/暂停按钮等）             |                              无                              |
+   |  `muted`   |                             静音                             |                              无                              |
+   | `autoplay` |                           自动播放                           |                              无                              |
+   |   `loop`   |                           循环播放                           |                              无                              |
+   |  `poster`  |                           视频封面                           |                           url 地址                           |
+   | `preload`  | 视频预加载（当设置 `autoplay` 属性时，自动忽略 `preload` 属性） | `none` 不预加载视频<br />`metadata` 仅预先获取视频的元数据<br />`auto` 下载整个视频文件（即使用户不希望使用） |
+
+   - 只有静音（`muted`）的视频，自动播放（`autoplay`）才会生效，这是浏览器对用户的一个保护
+
+   - 有时候非静音视频也可以自动播放，这涉及到浏览器的“媒体参与度”这一策略（如 chrome://media-engagement/），只有得分较高的网站允许非静音视频的自动播放
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319004640149.png" alt="image-20240319004640149" style="width:80%;" />
+
+     ```html
+     <vedio src="xxx.mp4" controls muted loop poster="xxx.png" preload="auto"></vedio>
+     ```
+
+2. 音频：`audio` 标签
+
+   |   属性名   |                             作用                             |                            属性值                            |
+   | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |   `src`    |                           音频地址                           |                           url 地址                           |
+   | `controls` |            向用户显示音频控件（播放/暂停按钮等）             |                              无                              |
+   |  `muted`   |                             静音                             |                              无                              |
+   | `autoplay` |                           自动播放                           |                              无                              |
+   |   `loop`   |                           循环播放                           |                              无                              |
+   | `preload`  | 音频预加载（当设置 `autoplay` 属性时，自动忽略 `preload` 属性） | `none` 不预加载音频<br />`metadata` 仅预先获取音频的元数据<br />`auto` 下载整个音频文件（即使用户不希望使用） |
+
+   ```html
+   <audio src="xxx.mp3" controls loop preload="auto"></audio>
+   ```
+
+## 新增全局属性
+
+|      属性名       |                       作用                       |                属性值                 |
+| :---------------: | :----------------------------------------------: | :-----------------------------------: |
+| `contenteditable` |            表示元素是否可以被用户编辑            | `true`：可编辑<br />`false`：不可编辑 |
+|    `draggable`    |              表示元素是否可以被拖动              | `true`：可拖动<br />`false`：不可拖动 |
+|     `hidden`      |     隐藏元素（和 `display: none` 作用一样）      |                  无                   |
+|   `spellcheck`    |           是否对元素进行拼写和语法检查           |   `true`：检查<br />`false`：不检查   |
+|   `contextmenu`   | 规定元素的上下文菜单，用户鼠标右键点击元素时显示 |                                       |
+|     `data-*`      |            用于存储页面的私有定制数据            |                                       |
+
+- `spellcheck` 属性的正确使用，可能需要打开浏览器中的以下设置
+
+  <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319005944323.png" alt="image-20240319005944323" style="width:80%;" />
+
+## 兼容性处理
+
+为了解决旧版本浏览器（如 IE8）对新 HTML5 标准不兼容的问题，我们主要有以下几种策略。
+
+1. 添加**元信息**，使浏览器处于**最优渲染模式**
+
+   ```html
+   <!-- 设置 IE 总是使用最新的文档模式进行渲染 -->
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   ```
+
+   ```html
+   <!-- 优先使用 webkit (Chromium) 内核进行渲染，针对 360 等双核浏览器 -->
+   <meta name="renderer" content="webkit">
+   ```
+
+2. 使用 `html4shiv.css` 让低版本浏览器认识 H5 的**语义化标签**（以下是特殊语法，表示如果 IE 版本小于 9，则引入 `.css` 文件）
+
+   ```html
+   <!--[if lt ie 9]>
+   <script src="./html5shiv.js"></script>
+   <![endif]-->
+   ```
+
+   - 上述语法举例
+     - `<!--[if IE 8]>仅IE8可见<![endif]-->`
+     - `<!--[if gt IE 8]>仅IE8以上可见<![endif]-->`
+     - `<!--[if lt IE 8]>仅IE8以下可见<![endif]-->`
+     - `<!--[if gte IE 8]>仅IE8及以上可见<![endif]-->`
+     - `<!--[if lte IE 8]>仅IE8及以下可见<![endif]-->`
+     - `<!--[if !IE 8]>非IE8可见<![endif]-->`
+
+# PART6 CSS3（day9|171p：73.1%）
+
+## 简介
+
+1. CSS3 概述：CSS3 是 CSS2 的升级版本，在 CSS2 的基础上，新增了许多强大的新功能，在未来会按照模块化的方式去发展。
+
+2. CSS3 新特性
+
+   - 更加实用的选择器：动态伪类、目标伪类、伪元素选择器等
+   - 更好的视觉效果：圆角、阴影、渐变等
+   - 丰富的背景效果：支持多个背景图片、新增背景相关属性
+   - 全新的布局方案：弹性盒子
+   - 新增了 `Web` 字体：可以显示用户电脑上未安装的字体
+   - 增强颜色：`HSL`、`HSLA`、`RGBA` 颜色模式，`opacity` 控制不透明度
+   - 增加 2D/3D 变换：旋转、扭曲、缩放、位移等
+   - 增加动画与过渡效果
+   - ......
+
+3. CSS3 私有前缀
+
+   - 是什么？`-webkit-border-radius: 20px` 中的 `-webkit-` 就是一个私有前缀
+
+   - 为什么？当 W3C 标准提出某个 CSS 特性后，浏览器厂商会先对该特性进行测试，测试通过后再正式支持该 CSS 特性；测试阶段，浏览器会**使用私有前缀来测试该 CSS 特性**，即在对应的属性名前加上对应的私有前缀，不同的浏览器内核对应的私有前缀不同；例如，在测试阶段，浏览器只会识别如 `-webkit-border-radius` 这样的属性，而不会支持 `border-radius` 这样的属性
+
+     |    浏览器    |  私有前缀  |
+     | :----------: | :--------: |
+     |    Chrome    | `-webkit-` |
+     |    Safari    | `-webkit-` |
+     |   Firefox    |  `-moz-`   |
+     |     Edge     | `-webkit-` |
+     | ~~旧 Opera~~ | ~~`-o-`~~  |
+     |  ~~旧 IE~~   |  ~~`ms`~~  |
+
+   - 怎知道？通过 https://caniuse.com/ 查询对应 CSS3 特性的兼容性
+
+   - 注意
+
+     - HTML5 基本 IE9 及以上及其他浏览器都是支持的，但是 CSS3 可能有部分模块有些浏览器不支持
+
+     - 前缀不一定和浏览器使用的内核一定对应
+
+     - 可以通过下述方式使用一些测试属性，如果测试阶段，自动识别第一行代码，忽略第二行；如果正式支持，忽略第一行代码，自动识别第二行
+
+       ```css
+       -webkit-border-radius: 20px;
+       border-radius: 20px;
+       ```
+
+     - 常用的 CSS3 新特性，主流浏览器都是支持的
+
+     - 可以利用现代构建工具（如 webpack）去帮助添加私有前缀
+
+## 新增长度单位
+
+| 长度单位 |                          含义                          |
+| :------: | :----------------------------------------------------: |
+|  `rem`   | **根元素字体大小**的**倍数**（只与根元素字体大小有关） |
+|   `vm`   |               **视口宽度**的**百分之几**               |
+|   `vh`   |               **视口高度**的**百分之几**               |
+|  `vmax`  |     $\max\{$视口高度，视口宽度$\}$ 的**百分之几**      |
+|  `vmin`  |     $\min\{$视口高度，视口宽度$\}$ 的**百分之几**      |
+
+- `vm` 在移动端开发中使用较多
+
+## 新增颜色设置方式
+
+CSS3 中新增的三种颜色设置方式为：`rgba`、`hsl`、`hsla`
+
+## 新增选择器
+
+CSS3 中新增的选择器有：动态伪类、目标伪类、语言伪类、UI 伪类、结构伪类、否定伪类、伪元素选择器
+
+## 新增盒子模型属性
+
+[28-c3盒子模型属性](./CODES/28-c3盒子模型属性.html)
+
+|     属性     |                             作用                             |                            属性值                            |
+| :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| `box-sizing` |                     设置盒模型的两种类型                     | `content-box` 默认值，此时 `width` 和 `height` 设置的是盒子内容区的大小<br />`border-box` 此时 `width` 和 `height` 设置的是盒子的总大小，又称怪异盒模型 |
+|   `resize`   | 控制是否允许用户调节元素尺寸<br />（需要配合 `overflow: hidden/scroll/auto` 使用） | `none` 默认值，表示不允许用户调整元素大小<br />`horizontal` 表示允许用户调节元素的宽度<br />`vertical` 表示允许用户调节元素的高度<br />`both` 表示允许用户调节元素的高度和宽度 |
+| `box-shadow` | 为盒子添加阴影<br />（根据属性值数量和值的不同，有六种写法） | `none` 默认值，表示没有阴影<br />`h-shadow` 表示阴影的水平位置，可以取负值<br />`v-shadow` 表示阴影的垂直位置，可以取负值<br />`blur` 可选，表示模糊距离<br />`spread` 可选，表示阴影的外延值<br />`color` 可选，表示阴影的颜色<br />`inset` 可选，表示外部阴影变为内部阴影<br />（前五个属性值必须有具体值，`inset` 本身就是属性值） |
+|  `opacity`   |                   为整个元素添加不透明效果                   |    `0~1` 之间的数值，`0` 表示完全透明，`1` 表示完全不透明    |
+
+- `rgba` 是颜色的设置方式，用于设置颜色，其透明度仅仅指的是颜色的透明度；`opacity` 是一个属性，设置的是整个元素（包含其中的内容）的不透明度
+
+## 新增背景属性
+
+[29-c3背景属性](./CODES/29-c3背景属性.html)
+
+|        属性         |                             作用                             |                            属性值                            |
+| :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| `background-origin` |               设置背景图的原点（图像的左上角）               | `padding-box` 默认值，表示以 `padding` 左上角为原点开始显示背景图像<br />`border-box` 表示以 `border` 左上角为原点开始显示背景图像<br />`content-box` 表示以 `content` 左上角为原点开始显示背景图像 |
+|  `background-clip`  | 设置背景的向外裁剪的区域（这里的背景包括背景颜色和背景图片） | `border-box` 默认值，表示从 `border` 开始外裁背景<br />`padding-box` 表示从 `padding` 开始外裁背景<br />`content-box` 表示从 `content` 开始外裁背景<br />`text` 表示背景图只显示在文字上 |
+|  `background-size`  |               设置背景图的尺寸（五种设置方式）               | `长度值宽 长度值高` 指定背景图片大小，不允许负值<br />`百分比宽 百分比高` 指定背景图片大小，不允许负值<br />`auto` 默认值，表示背景图片的真实大小<br />`contain` 表示将背景图片等比缩放，使背景图片的宽或高与容器的宽或高相等，再将完整的背景图放在容器内（可能会造成容器里部分区域没有背景图片）<br />`cover` 表示将背景图片等比缩放，直到完全覆盖容器，图片会尽可能全的显示在元素上，但此时图片可能会显示不完整（相对较好的选择） |
+|    `background`     |                           复合属性                           | 属性值顺序为 `color url repeat position / size origin clip`  |
+
+- `background-clip` 如果取值为 `text`，则可能需要加上私有前缀为 `-webkit-background-clip: text`
+
+- `background` 作为复合属性时，对属性值的顺序有一定的要求，但是前三个 `color`、`url`、`repeat` 的顺序和有无是随意的；如果 `origin` 和 `clip` 取值是一样的，则可以只写一个值；`size` 的值必须写在 `position` 之后，并且用 `/` 分开
+
+- 可以使用 `background` 引入**多个背景图片**，语法举例如下（可以理解是使用了四遍复合属性 `background`，除了不能设定 `background-color` 外，其余属性都可以使用）
+
+  ```css
+  background: url("xxx.png") no-repeat left top, 
+  			url("xxx.png") no-repeat right top, 
+  			url("xxx.png") no-repeat left bottom, 
+  			url("xxx.png") no-repeat right bottom
+  ```
+
+## 新增边框属性
+
+[30-c3边框属性](./CODES/30-c3边框属性.html)
+
+|             属性             |                             作用                             |                            属性值                            |
+| :--------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|       `border-radius`        |                   同时设置盒子四个角的圆角                   |          可以是 `1~8` 个值或百分比，具体见下述分析           |
+|   `border-top-left-radius`   |                    设置盒子左上角圆角半径                    |          可以是 `1~2` 个值或百分比，具体见下述分析           |
+|  `border-top-right-radius`   |                    设置盒子右上角圆角半径                    |          可以是 `1~2` 个值或百分比，具体见下述分析           |
+| `border-bottom-left-radius`  |                    设置盒子左下角圆角半径                    |          可以是 `1~2` 个值或百分比，具体见下述分析           |
+| `border-bottom-right-radius` |                    设置盒子右下角圆角半径                    |          可以是 `1~2` 个值或百分比，具体见下述分析           |
+|       `outline-width`        |                         外轮廓的宽度                         |                            长度值                            |
+|       `outline-color`        |                         外轮廓的颜色                         |                            长度值                            |
+|       `outline-style`        |                         外轮廓的风格                         | `none` 默认值，表示无轮廓<br />`dotted` 表示点状轮廓<br />`dashed` 表示虚线轮廓<br />`solid` 表示实线轮廓<br />`double` 表示双线轮廓 |
+|       `outline-offset`       | 设置外轮廓与边框的距离（该属性不是 `outline` 的子属性，是一个独立的属性） |               长度值，可以是负值，也可以是正值               |
+|          `outline`           |                           复合属性                           |    可选 `width`、`color`、`style`，无使用顺序，和必选属性    |
+
+- 要理解圆角相关的使用语法，则必须理解：**一个圆角是由一对 `(x,y)` 唯一决定的**
+
+- 定义左上角圆角为 `A(x,y)`，右上角圆角为 `B(x,y)`，右下角圆角为 `C(x,y)`，左下角圆角为 `D(x,y)`，则关于 `border-radius` 的各种用法、解释及渲染效果如下表（部分）（具体用法见 https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius）
+
+  - 一个参数 `α` 意思是设置四个圆角；
+  - 两个参数 `α β` 意思是 `α` 设置左上和右下圆角、`β` 设置左下和右上圆角
+  - 三个参数 `α β γ` 意思是 `α` 设置左上圆角、`β` 设置右上和左下圆角、`γ` 设置右下圆角
+  - 四个参数 `α β γ ω` 意思是 `α` 设置左上圆角、`β` 设置右上圆角、`γ` 设置右下圆角、`ω` 设置左下圆角
+  - `α / β` 意思是 `α` 设置四个圆角的 `x` 值，`β` 设置四个圆角的 `y` 值
+  - `α1 α2 / β` 意思是 `α1 α2` 按照两个参数的规则设置四个圆角的 `x` 值，`β` 设置四个圆角的 `y` 值
+  - `α1 α2 α3 / β1 β2 β3 β4` 意思是 `α1 α2 α3 ` 按照三个参数的规则设置四个圆角的 `x` 值，`β1 β2 β3 β4` 按照四个参数的规则设置四个圆角的 `y` 值
+  - 如果 `α` 是设置一个圆角的百分比，则使其 `[x,y]=α*[width, height]`；如果是一个数值，则使其 `x=y=α`
+  - 总而言之，参数数量不同（对应的圆角不同），参数类型不同（设置圆角方式不同），是否有 `/`（圆角的 `x`，`y` 是否单独设置）等，有许多种类型，但是规则很简单，只需要理解以下示例，那么都可以归纳总结了（最重要的是明白：①不同参数数量对应的圆角不同②百分比怎么修改圆角③ `/` 的含义是什么④圆角由两个参数确定）
+
+  | `border-radius` 语法/代码 |                             解释                             |                             效果                             |
+  | :-----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+  |          `10px`           |                     四个圆角：`x=y=10px`                     | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319231243794.png" alt="image-20240319231243794" style="width:50%;" /> |
+  |           `10%`           |             四个圆角：`[x,y]=10%[width,height]`              | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319231509514.png" alt="image-20240319231509514" style="width: 50%;" /> |
+  |        `10px 20px`        |       圆角 A、C：`x=y=10px`<br />圆角 B、D：`x=y=20px`       | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319231931839.png" alt="image-20240319231931839" style="width:50%;" /> |
+  |         `10% 20%`         | 圆角 A、C：`[x,y]=10%*[width,height]`<br />圆角 B、D：`[x,y]=20%*[width,height]` | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319232620609.png" alt="image-20240319232620609" style="width:50%;" /> |
+  |        `10% 20px`         | 圆角 A、C：`[x,y]=10%*[width,height]`<br />圆角 B、D：`x=y=20px` | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319232924266.png" alt="image-20240319232924266" style="width:50%;" /> |
+  |     `10px 20px 30px`      | 圆角 A：`x=y=10px`<br />圆角 B、D：`x=y=20px`<br />圆角 C：`x=y=30px` | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319233553478.png" alt="image-20240319233553478" style="width:50%;" /> |
+  |   `10px 20px 30px 40px`   | 圆角 A：`x=y=10px`<br />圆角 B：`x=y=20px`<br />圆角 C：`x=y=30px`<br />圆角 D：`x=y=40px` | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319233330740.png" alt="image-20240319233330740" style="width:50%;" /> |
+  |   `10px 5% / 20px 30px`   | 圆角 A、C：`x=10px,y=20px`<br />圆角 B、D：`x=5%*width,y=30px` | <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240319234450204.png" alt="image-20240319234450204" style="width: 50%;" /> |
+  |            ...            |                             ...                              |                             ...                              |
+
+- 关于`border-top-left-radius` 的各种用法如下表，其余三个对应的属性用法类同
+
+  | `border-top-left-radius` 语法/代码 |                解释                |
+  | :--------------------------------: | :--------------------------------: |
+  |               `10px`               |         左上角 `x=y=10px`          |
+  |           `10px / 20px`            |      左上角 `x=10px, y=20px`       |
+  |               `10%`                | 左上角 `[x,y]=10%*[width,height]`  |
+  |            `10% / 20%`             | 左上角 `x=10%*width, y=20%*height` |
+
+- 边框外轮廓不占位置，不属于盒子模型的内容，可以形象理解为盒子发出来的光
+
+## 新增文本属性
+
+[31-c3文本属性](./CODES/31-c3文本属性.html)
+
+|            属性             |                             作用                             |                            属性值                            |
+| :-------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|        `text-shadow`        |                        给文本添加阴影                        | `h-shadow` 必须项，数值，表示阴影的水平位置，允许负值<br />`v-shadow` 必须项，数值，表示阴影的垂直位置，允许负值<br />`blur` 可选项，数值，表示模糊距离<br />`color` 可选项，数值，表示阴影的颜色<br />`none` ，默认值，表示没有阴影 |
+|        `white-space`        |                       设置文本换行方式                       | `normal` 默认值，表示文本超出边界后自动换（文本中的换行被浏览器识别为一个空格）<br />`pre` 与 `pre` 标签相同，表示按原文显示<br />`pre-wrap` 表示在 `pre` 的基础上，超出边界后文本自动换行<br />`pre-line` 表示在 `pre` 的基础上，超出边界后文本自动换行，且只识别文本中的换行，并忽略每行前后的空格<br />`nowrap` 表示强制不换行 |
+|       `text-overflow`       | 设置文本溢出时的呈现模式<br />（必须有 `overflow: hidden/scroll/auto` 和 `white-space: nowrap`，改标签才能发挥作用） | `clip` 默认值，表示当内联内容溢出时，将溢出部分裁切掉<br />`ellipsis` 表示当内联内容溢出时，将溢出部分替换为 `...` |
+|      `text-decoration`      |                    复合属性，用于文本装饰                    |    可选 `line`、`style`、`color`，无使用顺序，和必选属性     |
+|   `text-decoration-line`    |                     设置文本装饰线的位置                     | `none` 默认值，表示文字无装饰<br />`underline` 表示下划线<br />`overline` 表示上划线<br />`line-through` 表贯穿线（删除线） |
+|   `text-decoration-style`   |                     设置文本装饰线的形状                     | `solid` 实线<br />`double` 双线<br />`dotted` 点状线<br />`dashed` 虚线<br />`wavy` 波浪线 |
+|   `text-decoration-color`   |                     设置文本装饰线的颜色                     |                            颜色值                            |
+|    `-webkit-text-stroke`    |                    复合属性，用于文本描边                    |         可选 `width`、`color` 无顺序要求，和必选属性         |
+| `-webkit-text-stroke-width` |                      设置文本描边的宽度                      |                            长度值                            |
+| `-webkit-text-stroke-color` |                      设置文本描边的颜色                      |                            颜色值                            |
+
+## 新增渐变（day10|177p：80.2%）
+
+[32-c3渐变效果](./CODES/32-c3渐变效果.html)
+
+1. 渐变：本质上就是将渐变的颜色作为元素的背景图片，可以通过 `background-image` 属性实现渐变效果。渐变分为**线性渐变**和**径向渐变**，此外在这二者的基础上可以实现**重复渐变**。
+
+2. 线性渐变：借助 `linear-gradient()` 实现。
+
+   ```css
+    /* basic grammar */
+    background-image: linear-gradient([direction], color1 [start-place], color2 [start-place], color3 [start-place], ...)
+   ```
+
+   |                          代码                          |                         解释                         |                             效果                             |
+   | :----------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------------: |
+   |         `linear-gradient(red, yellow, green)`          |          默认从上到下进行颜色渐变：红→黄→绿          | ![image-20240320142957266](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320142957266.png) |
+   |  `linear-gradient(to right top, red, yellow, green);`  |          设置向右上角进行颜色渐变：红→黄→绿          | ![image-20240320143340763](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320143340763.png) |
+   |    `linear-gradient(to left, red, yellow, green);`     |                   设置向左进行颜色                   | ![image-20240320143418814](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320143418814.png) |
+   |      `linear-gradient(45deg, red, yellow, green)`      | 将从上到下进行的颜色渐变（红→黄→绿）顺时针旋转 `45°` | ![image-20240320165109503](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320165109503.png) |
+   | `linear-gradient(red 50px, yellow 100px, green 150px)` |          设置每种颜色在渐变中出现的起始位置          | ![image-20240320165506448](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320165506448.png) |
+
+   - 我们可以设置参与线性渐变的**颜色**、用关键词设置线性渐变的**方向**（默认是从上到下）、使用数值设置每种颜色**开始渐变的位置**
+
+   - 注：当我们调整颜色开始渐变的位置之后，元素会存在部分区域是纯色非渐变的，如当我们使用样式 `background-image: linear-gradient(red 50px, yellow 100px, green 150px)` 之后，情形如下
+
+     <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320170245765.png" alt="image-20240320170245765" style="width: 50%; margin: 0 auto" />
+
+3. 径向渐变：借助 `radial-gradient()` 实现。
+
+   ```css
+   /* basic grammar */
+   background-image: radial-gradient([center-radius] ,[center-position] ,color1 [start-place], color2 [start-place], color3 [start-place], ...);
+   ```
+
+   |                             代码                             |                             解释                             |                             效果                             |
+   | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |            `radial-gradient(red, yellow, green)`             | 多个颜色之间的渐变，默认从圆心四散（不一定是正圆，关键是看容器本身宽高比） | ![image-20240320185313313](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185313313.png) |
+   |     `radial-gradient(at right top, red, yellow, green)`      |                 通过关键词调整渐变的圆心位置                 | ![image-20240320185332489](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185332489.png) |
+   |    `radial-gradient(at 300px 100px, red, yellow, green)`     |                  通过数值调整渐变的圆心位置                  | ![image-20240320185425841](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185425841.png) |
+   |      `radial-gradient(200px 150px, red, yellow, green)`      |                  通过数值调整渐变的圆心半径                  | ![image-20240320185453622](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185453622.png) |
+   |        `radial-gradient(circle, red, yellow, green)`         |                     调整渐变的形状为正圆                     | ![image-20240320185526657](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185526657.png) |
+   |    `radial-gradient(red 50px, yellow 100px, green 150px)`    |              调整每种颜色在渐变中出现的起始位置              | ![image-20240320185541968](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185541968.png) |
+   | `radial-gradient(100px 50px at 150px 150px, red 50px, yellow 100px, green 150px)` |                           复合使用                           | ![image-20240320185606792](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320185606792.png) |
+
+   - 我们可以设置参与径向渐变的**颜色**、用关键词或数值设置径向渐变的**圆心位置**、用数值设置径向渐变的**圆心半径**、使用数值设置每种颜色**开始渐变的位置**
+   - 注：类似线性渐变，当我们调整颜色开始渐变的位置之后，元素会存在部分区域是纯色非渐变的
+
+4. 重复渐变：借助 `repeating-linear-gradient()` 或 `repeating-radial-gradient()`实现。
+
+   - 这里的**重复**：指的是在没有发生渐变的区域，重新开始渐变
+   - 相应的，所谓需要使用重复的线性渐变或径向渐变的关键是在于**是否存在纯色区域**，只有该渐变具有纯色区域，使用重复渐变才有效
+
+## web 字体
+
+[33-c3Web字体](./CODES/33-c3Web字体.html)
+
+1. Why＆What？当我们设置网页字体时，可能会面对一个问题，那就是：如果我们想要使用某个字体，但是用户没有下载该字体，那么我们如何才能让用户在网页上呈现我们想要的字体呢？—— Web 字体（即在网页中引入本地或服务器中的字体文件）
+
+2. Web 字体的基本用法：通过 `@font-face` 指定字体的具体地址，浏览器会自动下载该字体，这样就不依赖用户电脑上的字体了。
+
+   - 简写写法
+
+     ```css
+     @font-face {
+         font-family: "自定义的字体名";
+         src: url("本地字体文件路径/网络服务器上字体文件网址");
+     }
+     ```
+
+     > 此时若我们需要使用相应字体，应该在对应元素的 `font-family` 属性赋予我们自定义的字体名
+
+   - 高兼容性写法
+
+     ```css
+     @font-face {
+         font-family: 'webfont';
+         font-display: swap;
+         src: url('webfont.eot'); /* IE9 */
+         src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('webfont.woff2') format('woff2'),
+         url('webfont.woff') format('woff'), /* chrome、firefox */
+         url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+     }
+     ```
+
+3. 定制字体：因为中文的字体文件通常很大，而实际中我们不会使用字体文件中的全部文字，因此我们采用**对某些文字进行单独定制**的方式，引入更小的字体资源文件。[阿里 Web 字体定制工具](https://www.iconfont.cn/webfont)
+
+4. 字体图标：实质上是一种文字，而不是图片，是一种用于看而不是读的文字。其优势有：相比图片更加清晰；灵活性高，可以方便改变大小、颜色、风格等；兼容性好，`IE` 也可支持。 [阿里字体图标库](https://www.iconfont.cn/collections/index?spm=a313x.home_index.i1.1.58a33a81IAtVRE)
+
+## 2D 变换
+
+[34-c3多重变换](./CODES/34-c3多重变换.html)
+
+变换：是指将 HTML 中的元素进行**位移、缩放、旋转、扭曲**等操作，2D 变换建立在二维坐标系下，3D 变换建立在三维坐标系下，而变换的实现，我们都是通过 `transform` 属性实现。`transform` 相关的变换都不能用在**行内元素**上。
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320203422566.png" alt="image-20240320203422566" style="width:50%; margin: 0 auto" />
+
+1. 位移：2D 变换下的位移可以改变**元素的位置**，元素的 `transform` 属性的取值情况如下。
+
+   |     属性值     |                             作用                             |
+   | :------------: | :----------------------------------------------------------: |
+   | `translateX()` |    设置元素水平方向位移，长度值 or 百分比（参考自身宽度）    |
+   | `translateY()` |    设置元素垂直方向位移，长度值 or 百分比（参考自身高度）    |
+   | `translate()`  | 一个值，设置元素水平方向的位移<br />两个值，设置元素水平和垂直方向的位移 |
+
+   - 位移与相对定位相似：**不脱离文档流**；不会影响到其他元素
+
+   - 位移与相对定位区别：相对定位的百分比值参考其父元素，位移的百分比值参考自身
+
+   - 浏览器针对位移有优化，因此与定位相比，**浏览器处理位移的效率更高**
+
+   - `transform` 属性也可以链式编写指定元素水平和垂直方向上的位移 `transform: translateX(30px) translateY(40px)`
+
+   - 位移操作对**行内元素无效**
+
+   - 位移配合绝对定位，可以实现元素垂直水平居中，代码如下
+
+     ```css
+     .box {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+     }
+     ```
+
+2. 缩放：2D 变换下的缩放可以改变**元素的大小**，元素的 `transform` 属性的取值情况如下。
+
+   |   属性值   |                             作用                             |
+   | :--------: | :----------------------------------------------------------: |
+   | `scaleX()` | 设置元素水平方向的缩放比例，数值（1 表示不缩放，大于 1 表示放大，小于 1 表示缩小） |
+   | `scaleY()` | 设置元素垂直方向的缩放比例，数值（1 表示不缩放，大于 1 表示放大，小于 1 表示缩小） |
+   | `scale()`  | 一个值，同时设置元素水平和垂直方向的缩放比例<br />两个值，分别设置元素水平和垂直方向的缩放比例 |
+
+   - `scale` 的取值可以是负值，但一般不使用
+   - 借助缩放，可以实现显示小于浏览器规定最小字体（如 `12px`）的文字
+
+3. 旋转：2D 变换下的旋转可以让元素**顺时针或逆时针旋转**，元素的 `transform` 属性的取值情况如下。
+
+   |  属性值   |                             作用                             |
+   | :-------: | :----------------------------------------------------------: |
+   | `rotateZ` | 设置元素按 Z 轴的旋转角度，角度值 `deg`，正值表示顺时针旋转，负值表示逆时针旋转 |
+   | `rotate`  |                  一个值，同 `rotateZ` 用法                   |
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320205054960.png" alt="image-20240320205054960" style="width:50%; margin: 0 auto" />
+
+4. 扭曲：2D 变换下的扭曲让元素在二维平面被拉扯，进而走形，实际开发中几乎不用，元素的 `transform` 属性的取值情况如下。
+   | 属性值  |                             作用                             |
+   | :-----: | :----------------------------------------------------------: |
+   | `skewX` | 设置元素在水平方向的扭曲，角度值 `deg`，会将元素的左上角和右下角拉扯 |
+   | `skewY` | 设置元素在垂直方向的扭曲，角度值 `deg`，会将元素的左上角和右下角拉扯 |
+   | `skew`  | 一个值，设置元素在水平方向上的扭曲<br />两个值，设置元素在水平和垂直方向上的扭曲 |
+
+5. 多重变换：2D 变换下的多重变换，指的是让元素通过 `transform` 属性实现位移、缩放、旋转、扭曲。
+
+   - 先位移再缩放 ≠ 先缩放再位移
+
+     |                      代码                       |                             效果                             |
+     | :---------------------------------------------: | :----------------------------------------------------------: |
+     |             `transform: scale(0.5)`             | ![image-20240320211209830](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211209830.png) |
+     |      `transform: translate(100px, 100px)`       | ![image-20240320211230379](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211230379.png) |
+     | `transform: scale(0.5) translate(100px, 100px)` | ![image-20240320211249321](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211249321.png) |
+     | `transform: translate(100px, 100px) scale(0.5)` | ![image-20240320211309842](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211309842.png) |
+
+     - 整个变换的过程中，二维坐标系没有改变
+
+       <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211624493.png" alt="image-20240320211624493" style="width:50%; margin: 0 auto" />
+
+     - 位移变换的操作是，对于给定的 `(x,y)`，将元素盒子的左上角移动到二维坐标系中的 `(x,y)` 处
+
+     - 缩放变换的操作是，对于给定的缩放比例，以元素盒子的水平垂直中心为原点进行缩放
+
+   - 先位移再旋转 ≠ 先旋转再位移
+
+     |                        代码                        |                             效果                             |
+     | :------------------------------------------------: | :----------------------------------------------------------: |
+     |             `transform: rotate(30deg)`             | ![image-20240320212611392](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320212611392.png) |
+     |        `transform: translate(100px, 100px)`        | ![image-20240320211230379](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320211230379.png) |
+     | `transform: rotate(30deg) translate(100px, 100px)` | ![image-20240320212755150](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320212755150.png) |
+     | `transform: translate(100px, 100px) rotate(30deg)` | ![image-20240320212814628](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320212814628.png) |
+
+     - 整个变换的过程中，二维坐标系被旋转破坏掉了
+
+       <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240320213025834.png" alt="image-20240320213025834" style="width:50%; margin: 0 auto" />
+
+     - 旋转变换的操作是，对于给定的角度值，以元素盒子的水平垂直中心为原点进行顺时针或逆时针旋转；与之同时，二维坐标系也发生了旋转
+
+   - 多重变换的使用注意：因为旋转变换对二维坐标系的破坏性，因此使用多重变换时，最后再进行旋转
+
+6. 变换原点：元素变换时默认以元素的中心为原点作为变换原点进行变换，使用 `transform-origin` 属性可以设置变换原点，该属性的取值情况如下。
+
+   |         属性取值举例          |                             作用                             |
+   | :---------------------------: | :----------------------------------------------------------: |
+   |  `transform-origin: 30% 40%`  | 变换原点的 `x` 坐标为自身宽度的 `30%`；`y` 坐标为自身高度的 `40%` |
+   | `transform-origin: left top`  |                  变换原点在元素盒子的左上角                  |
+   | `transform-origin: 30px 40px` |               变换原点的坐标为 `(30px, 40px)`                |
+   |    `transform-origin: 30%`    | 变换原点的 `x` 坐标为自身宽度的 `30%`；`y` 坐标为自身高度的 `50%` |
+   |   `transform-origin: left`    |           变换原点在元素盒子的左中点 `left center`           |
+   |  `transform-origin: bottom`   |          变换原点在元素盒子的中下点 `center bottom`          |
+   |   `transform-origin: 30px`    |           变换原点的坐标为 `(30px, 50%*自身高度)`            |
+
+   - 我们可以用百分比、像素值、关键字设置变换原点的位置；如果是两个值，则分别设置变换原点水平和垂直的位置；如果是一个值，则设置变换原点水平位置，垂直位置默认为自身高度的 `50%`（关键字除外，因为可以识别出是 `x` 方向，还是 `y` 方向）
+   - 修改变换原点对位移变换没有影响，**对旋转变换和缩放变换有影响**
+
+## 3D 变换
+
+3D 变换：与 2D 变换不同，3D 变换建立在三维坐标系下，同时为了对元素进行 3D 变换，其**父元素**必须**开启 3D 空间**；此外，我们也需要学习理解**景深**这一概念，并给**父元素**设置景深（可选）；我们也可以通过在**父元素**中修改**透视点位置**（可选）。
+
+1. 开启 3D 变换：必须在需要 3D 变换的元素的**父元素**中设置！！！
+
+   ```css
+   transform-style: preserve-3d;
+   /* 通过在父元素中设置 transform-style 属性，我们可以开启 3D 变换
+   	1. 可选值 flat：默认值，表示让子元素位于此元素的二维平面内（2D 空间）
+   	2. 可选值 preserve-3d：表示让子元素位于此元素的三维空间内（3D 空间）
+   */
+   ```
+
+2. 设置景深：景深是指观察者与 `z=0` 平面的距离，设置景深，可以让发生 3D 变换的元素产生透视效果，看起来更加立体。我们可以借助 `perspective` 属性设置景深，同时，该属性也必须设置给需要 3D 变换的元素的**父元素**！！！
+
+   ```css
+   perspective: 100px;
+   /* 通过在父元素中设置 perspective 属性，我们可以设置观察者与 z=0 平面的距离
+   	1. none：默认值，表示不设置景深（不指定透视）
+   	2. 长度值：表示观察者距离 z=0 平面的距离，不允许是负值
+   */
+   ```
+
+3. 修改透视点位置：透视点位置就是观察者的位置，默认的透视点位置是元素的中心。我们可以借助 `perspective-origin` 属性设置透视点位置，同时，该属性也必须设置给需要 3D 变换的元素的**父元素**！！！
+
+   ```css
+   perspective-origin: 400px 300px;
+   /* 通过在父元素中设置 perspective-origin 属性，我们可以设置观察者位置（透视点位置）
+   	通常是两个值，第一个值表示水平相对距离，第二个值表示垂直相对距离；
+   	0px 0px 即元素盒子的中心，200px 300px 表示从元素盒子中心向右移动 200px，向下移动 300px
+   */
+   ```
+
+---
+
+1. 位移：3D 位移是在 2D 位移的基础上，可以让元素沿着 `z` 轴位移，也是通过 `transform` 属性实现，属性取值如下。
+
+   |     属性值      |                             作用                             |
+   | :-------------: | :----------------------------------------------------------: |
+   | `translateZ()`  | 设置 `z` 轴位移，长度值，正值表示向屏幕外位移，负值表示向屏幕里位移（不能写百分比） |
+   | `translate3d()` | 第一个参数对应 `x` 轴位移，第二个参数对应 `y` 轴位移，第三个参数对应 `z` 轴位移（三个参数均不能省略） |
+
+2. 旋转：3D 旋转是在 2D 旋转的基础上，可以让元素沿着 `x` 轴和 `y` 轴旋转，也是通过 `transform` 属性实现，属性取值如下。
+
+   |    属性值    |                             作用                             |
+   | :----------: | :----------------------------------------------------------: |
+   | `rotateX()`  | 设置元素按照 `x` 轴的旋转角度，角度值 `deg`，面对 `x` 轴：正值表示顺时针旋转，负值表示逆时针旋转 |
+   | `rotateY()`  | 设置元素按照 `y` 轴的旋转角度，角度值 `deg`，面对 `y` 轴：正值表示顺时针旋转，负值表示逆时针旋转 |
+   | `rotate3d()` | 共四个参数，前三个参数分别表示 `x`，`y`，`z` 坐标轴是否旋转，第四个参数表示旋转的角度（四个参数均不能省略） |
+
+   ```css
+   transform: rotate3d(1, 1, 1, 30deg) /* 元素绕 x、y、z 轴分别旋转三十度 */
+   ```
+
+3. 缩放：3D 缩放是在 2D 缩放的基础上，可以让元素沿着 `z` 轴缩放，也是通过 `transform` 属性实现，属性取值如下。
+
+   |   属性值    |                             作用                             |
+   | :---------: | :----------------------------------------------------------: |
+   | `scaleZ()`  | 设置元素在 `z` 轴方向的缩放比例，数值（1 表示不能缩放，大于 1 表示放大，小于 1 表示缩小） |
+   | `scale3d()` | 第一个参数对应元素 `x` 轴方向的缩放比例，第二个参数对应元素 `y` 轴方向的缩放比例，第三个参数对应元素 `z` 轴方向的缩放比例（三个参数不允许省略） |
+
+   - 可以将 `scaleZ` 理解为修改元素的厚度，但是元素没有厚度，所以相应的，浏览器会根据 `scaleZ` 的值修改景深，起到一个类似的效果
+
+4. 多重变化：同样的，3D 多重变换时，因为旋转会破坏坐标系，故而**最后旋转**。
+
+5. 变换原点：与 2D 变换设置变换原点的方式相同，语法为：`transform-origin: x y`。我们讨论变换原点对于旋转变换的影响。
+
+   - `rotateZ` 以过 `(x, y)` 垂直于 `z=0` 平面的直线为旋转轴
+   - `rotateX` 以过 `(x, y)` 垂直于 `y=0`，在 `z=0` 平面的直线为旋转轴
+   - `rotateY` 以过 `(x, y)` 垂直于 `x=0`，在 `z=0` 平面的直线为旋转轴
+
+6. 背部可见性：当旋转元素过 `90deg` 后，我们可以看见元素的背部内容，通过语法 `backface-visibility: hidden` 可以设置元素背部内容不可见。
+
+## 过渡（day11|181p：88.2%）
+
+[35-c3过渡](./CODES/35-c3过渡.html)
+
+过渡：在不使用 `Flash` 动画、不使用 `JavaScript` 的情况下，让元素从一种样式，以一种特殊的效果变成另一种样式。
+
+|            属性名            |                             作用                             |                            属性值                            |
+| :--------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    `transition-property`     | 定义需要过渡的属性<br />（只有在该属性中定义的属性才可会有过渡效果） | `none` 表示任何属性都不过渡<br />`all` 默认值，表示全部属性都可以过渡<br />`具体某个属性名` 表示特定的属性可以过渡（多个属性名之间逗号分隔） |
+|    `transition-duration`     | 设置过渡的持续时间<br />（即一个样式过渡到另一个样式耗时多久） | `0` 默认值，表示没有任何过渡时间<br />时间值 单位为 `s` 或 `ms`<br />时间列表 一个值，表示让所有过渡属性持续时间都相同；多个值，以逗号分隔，表示给每个过渡属性设置不同的持续时间 |
+|      `transition-delay`      |                   设置过渡开始前的延迟时间                   |                  时间值 单位为 `s` 或 `ms`                   |
+| `transition-timing-function` |                        设置过渡的类型                        | `ease` 默认值，表示平滑过渡<br />`linear` 表示线性过渡<br />`ease-in` 表示过渡从慢→快<br />`ease-out` 表示过渡从快→慢<br />`ease-in-out` 表示过渡从慢→快→慢<br />`step-start` 等同 `steps(1, start)`<br />`step-end` 等同 `steps(1, end)`<br />`steps(integer, start/end)` 接受两个参数的步进函数；第一个参数必须是正整数，表示过渡的步数；第二个参数可以是 `start` 和 `end`，默认是 `end`，表示过渡每一步发生变化的时间点<br />`cubic-bezier(number, number, number, number)`：特定的贝塞尔曲线类型 |
+|         `transiton`          |                           复合属性                           | 语法为：`transition-duration transition-property transition-delay transition-timing-function` |
+
+- 只有值为数字或可以转为数字的属性，才支持过渡，如：颜色、长度值、百分比、`z-index`、`opacity`、2D 变换属性、3D 变换属性、阴影等
+- `ease` 和 `ease-in-out` 类型的过渡都是从慢→快→慢，但是 `ease` 更加平滑一些
+- `steps(integer, start/end)` 步进函数的 `start` 表示，对于一段过渡时间，开始时刻，瞬间过渡到对应状态，再等待这段时间结束；`end` 表示，等这一段过渡时间结束的一刻，瞬间过渡到对应状态
+- `cubic-bezier(number, number, number, number)` 可以利用[在线制作贝塞尔曲线](https://cubic-bezier.com)，并粘贴对应的代码设置过渡类型
+- `transition` 复合属性，如果设置了一个时间，则表示 `transition-duration`；如果设置了两个时间，则第一个表示 `transition-duration`，第二个表示 `transition-delay`；其他属性值没有顺序要求；所有属性值没有必须的要求
+
+## 动画
+
+[36-c3动画](./CODES/36-c3动画.html)
+
+1. 动画：在一段时间内连续播放 `n` 个画面。
+2. 帧：动画中的每一张画面。一定时间内连续快速播放若干个帧就形成了动画，相同时间内，播放的帧数越多，画面看起来就越流畅。
+3. 关键帧：构成一段动画的若干帧中，起决定性作用的几帧。
+
+4. 动画的定义语法：通过关键帧定义动画
+
+   - 方式一：设定开始和结束的关键帧
+
+     ```css
+     @keyframes animation-name {
+         from {
+             /* value of properties */
+         }
+         to {
+     		/* value of properties */
+         }
+     }
+     ```
+
+   - 方式二：除了设定开始和结束的关键帧外，还可以设置动画中的任意阶段的关键帧
+
+     ```css
+     @keyframes animation-name {
+         0% {
+             /* value of properties */
+         }
+         20% {
+             /* value of properties */
+         }
+         60% {
+             /* value of properties */
+         }
+         80% {
+             /* value of properties */
+         }
+         100% {
+             /* value of properties */
+         }
+     }
+     ```
+
+   - 方式三：方式一和方式二混用，但不推荐
+
+|           属性名            |                   作用                   |                            属性值                            |
+| :-------------------------: | :--------------------------------------: | :----------------------------------------------------------: |
+|      `animation-name`       |           给元素应用指定的动画           |                通过 `@keyframes` 定义的动画名                |
+|    `animation-duration`     |            设置动画的持续时间            |                  时间值，单位为 `s` 或 `ms`                  |
+|      `animation-delay`      |         设置动画开始前的延迟时间         |                  时间值，单位为 `s` 或 `ms`                  |
+| `animation-timing-function` |              设置动画的类型              | `ease` 默认值，表示平滑过渡<br />`linear` 表示线性过渡<br />`ease-in` 表示过渡从慢→快<br />`ease-out` 表示过渡从快→慢<br />`ease-in-out` 表示过渡从慢→快→慢<br />`step-start` 等同 `steps(1, start)`<br />`step-end` 等同 `steps(1, end)`<br />`steps(integer, start/end)` 接受两个参数的步进函数；第一个参数必须是正整数，表示过渡的步数；第二个参数可以是 `start` 和 `end`，默认是 `end`，表示过渡每一步发生变化的时间点<br />`cubic-bezier(number, number, number, number)`：特定的贝塞尔曲线类型 |
+| `animation-iteration-count` |            设置动画的播放次数            |   `number` 动画的循环次数<br />`infinite` 表示动画无限循环   |
+|    `animation-direction`    |              指定动画的方向              | `normal` 默认值，表示正常方向（即从开始关键帧到结束关键帧）<br />`reverse` 表示反方向<br />`alternate` 表示先正方向，再反方向，交替持续<br />`alternat-reverse` 表示先反方向，再正方向，交替持续 |
+|    `animation-fill-mode`    | 设置动画之外的状态（即不发生动画的时候） | `forwards` 设置元素为动画结束时的状态<br />`backwards` 设置元素为动画开始时的状态 |
+|   `animation-play-status`   |            设置动画的播放状态            |      `running` 默认值，表示播放<br />`paused` 表示暂停       |
+|         `animation`         |                 复合属性                 | 语法为：`animation-name animation-duration animation-delay animation-timing-function animation-iteration animation-direction animation-fill-mode animation-play-status` |
+
+- 有时候应用动画，刚开始的短暂时间内可能会出现不完美的渲染，此时可以在浏览器中打开硬件加速模式，或能解决
+
+  <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321155708191.png" alt="image-20240321155708191" style="width:50%; margin: 0 auto;" />
+
+- `animation` 复合属性，如果设置了一个时间，则表示 `animation-duration`；如果设置了两个时间，则第一个表示 `animation-duration`，第二个表示 `animation-delay`；其他属性值没有顺序要求；所有属性值没有必须的要求
+
+- `animation-play-status` 一般单独使用，不在复合属性中设置
+
+- 动画与过渡的区别？？
+
+  - 动画不需要任何触发条件；过渡需要触发条件，并且当触发条件撤销后，会恢复过渡前的状态
+  - 动画可以在变化的过程中添加新的样式（关键帧）；过渡只能设置元素过渡后的状态
+
+## 多列布局
+
+[37-c3多列布局](./CODES/37-c3多列布局.html)
+
+1. 文字多列布局：专门用于实现类似报纸的布局。
+
+   |       属性名        |                作用                |                            属性值                            |
+   | :-----------------: | :--------------------------------: | :----------------------------------------------------------: |
+   |   `column-count`    |              指定列数              |                             数字                             |
+   |   `column-width`    |              指定列宽              |                             长度                             |
+   |      `columns`      |              复合属性              | 语法为：`column-count column-width`，没有数量和顺序要求；<br />实际列数等于 `count` 和根据 `width` 计算得到的 `count` 之间的较小值 |
+   |    `column-gap`     |             指定列边距             |                             长度                             |
+   | `column-rule-style` |         设置列间边框的风格         | 与 `border-style` 取值相同，如 `dashed`、`dotted`、`solid` 等 |
+   | `column-rule-width` |         设置列间边框的宽度         |                             长度                             |
+   | `column-rule-color` |         设置列间边框的颜色         |                             颜色                             |
+   |    `column-rule`    |              复合属性              | 语法为：`column-rule-width column-rule-color column-rule-style`，没有顺序要求，但是三个参数都得写 |
+   |    `column-span`    | 设置当前元素是否跨列（常用于标题） |        `none` 默认值，表示不跨列<br />`all` 表示跨列         |
+
+   - `column-span` 属性必须给要跨列的元素单独添加，如 `h1`；其他属性则需要给放置内容的容器去添加
+
+2. 图片多列布局：设置 `column-count` 属性即可
+
+## 伸缩盒模型
+
+### 简介
+
+1. **伸缩盒模型**：英文为 Flexible Box，又称**弹性盒子**，是 W3C 于 2009 年提出的一种新的盒子模型。
+2. 优势
+   - 伸缩盒模型可以轻松控制：元素分布方式、元素对齐方式、元素视觉顺序等
+   - 目前，除了部分 IE 浏览器不支持，其他浏览器均已全部支持伸缩盒模型
+   - 伸缩盒模型的出现演变出了一套新的布局方案，即 `flex` 布局
+     - 传统布局：基于传统盒模型，依靠 `display`、`position`、`float` 属性实现布局
+     - 因为传统布局不能很好呈现在移动设备上，`flex` 布局在移动端应用较广泛
+
+### 伸缩容器与伸缩项目
+
+1. **伸缩容器**：开启了 `flex` 布局的元素，有两种方式开启这种布局（通过`display` 属性实现）。
+
+   - 方式一：`display: flex`
+
+   - 方式二：`display: inline-flex`
+
+     > 方式二比较少用，因为 `inline-flex` 将元素变为伸缩容器的同时，使得其也有了行内块的特性，此时两个伸缩容器之间可能会因为 HTML 源代码中的换行在网页中呈现空格效果
+
+2. **伸缩项目**：伸缩容器的所有**子元素**。
+
+   - 伸缩容器的**子元素**是伸缩项目，其孙子元素、重孙子元素等后代元素，都不是伸缩项目
+   - 无论原来是什么类型的元素（块、行内块、行内），一旦成为了伸缩项目，全都会**块状化**（可以设置宽高，也可以由内容撑起宽高）
+   - 一个元素可以同时是伸缩容器和伸缩项目
+
+### 主轴与侧轴
+
+1. **主轴**（`main axis`）：伸缩容器中**的伸缩项目沿主轴排列**，主轴默认是**水平**的，默认方向是：左→右（左边是起点，右边是终点）。
+
+2. **侧轴**（`cross axis`）：**与主轴垂直**，侧轴默认是**垂直**的，默认方向是：上→下（上边是起点，下边是终点）
+
+3. **主轴方向**：通过 `flex-direction` 属性，可以修改伸缩容器的主轴方向。
+
+   > - 当我们修改了主轴方向后，侧轴方向也随之改变
+   > - 我们不关注原点这一概念，关心的是主轴和侧轴的方向，从而便于元素布局与对齐等
+
+   |      属性值      |               作用               |
+   | :--------------: | :------------------------------: |
+   |      `row`       | 默认值，表示主轴方向：左→右（→） |
+   |  `row-reverse`   |     表示主轴方向：右→左（←）     |
+   |     `column`     |     表示主轴方向：上→下（↓）     |
+   | `column-reverse` |     表示主轴方向：下→上（↑）     |
+
+   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321221505610.png" alt="image-20240321221505610" style="width:55%; margin: 0 auto;" />
+
+### 主轴换行方式
+
+我们使用 `flex-wrap` 属性来修改伸缩容器中主轴方向上元素的换行方式。
+
+|     属性值     |                             作用                             |                           效果举例                           |
+| :------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    `nowrap`    |   默认值，表示**不换行**（此时若伸缩项目过多则会压缩宽度）   | ![image-20240321231855379](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321231855379.png) |
+|     `wrap`     | 表示**自动换行**（此时换行的伸缩项目不一定会抵着上一行项目放置，而可能会有一定的间距） | ![image-20240321232055627](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321232055627.png) |
+| `wrap-reverse` |      表示**自动反向换行**（此时第二行元素会从上边开启）      | ![image-20240321232136050](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321232136050.png) |
+
+### 复合属性：主轴方向＆换行
+
+我们可以使用复合属性 `flex-flow` 同时设置主轴方向和元素在主轴方向上的换行方式，两个属性值没有顺序和必须要求，语法如下。
+
+```css
+flex-flow: flex-direction flex-wrap;
+```
+
+> 一般来说不是用这个复合属性，而是使用其对应的两个子属性，更加见名知意
+
+### 主轴对齐方式
+
+我们可以使用 `justify-content` 属性调整元素在主轴方向上的对齐方式。
+
+|     属性值      |                             作用                             |                           效果举例                           |
+| :-------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  `flex-start`   |         默认值，表示元素从**主轴的起始位置紧凑**对齐         | ![image-20240321234106786](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234106786.png) |
+|   `flex-end`    |             表示元素从**主轴的结束位置紧凑**对齐             | ![image-20240321234117833](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234117833.png) |
+|    `center`     |                   表示元素**居中紧凑**对齐                   | ![image-20240321234128487](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234128487.png) |
+| `space-between` | 表示元素**分散**对齐，**伸缩项目之间间距相等，两边伸缩项目距伸缩容器边缘无间距**，最常用 | ![image-20240321234359006](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234359006.png) |
+| `space-around`  | 表示元素**分散**对齐，**伸缩项目之间间距相等，两边伸缩项目距伸缩容器边缘为项目之间间距一半** | ![image-20240321234458933](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234458933.png) |
+| `space-evenly`  | 表示元素**分散**对齐，**伸缩项目之间间距和两边伸缩项目距伸缩容器边缘间距均相等** | ![image-20240321234554542](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321234554542.png) |
+
+### 侧轴对齐方式
+
+我们可以使用 `align-items` 和 `align-content` 两个属性调整元素在侧轴方向上的对齐方式，specifically，我们需要分伸缩容器中有**一行**伸缩项目还是**多行**伸缩项目这两种情况进行讨论。
+
+1. 情况一：伸缩容器中只有**一行伸缩项目**，我们使用 `align-items` 属性设置元素在侧轴方向上的对齐方式。
+
+   |    属性值    |                             作用                             |                           效果举例                           |
+   | :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   | `flex-start` |               表示元素与**侧轴的起始位置**对齐               | ![image-20240321235548007](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321235548007.png) |
+   |  `flex-end`  |               表示元素与**侧轴的结束位置**对齐               | ![image-20240321235600273](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321235600273.png) |
+   |   `center`   |                 表示元素与**侧轴的中点**对齐                 | ![image-20240321235738288](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240321235738288.png) |
+   |  `baseline`  |  表示元素之间**第一行文字的基线对齐**（小写 `x` 底边对齐）   | ![image-20240322000220748](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322000220748.png) |
+   |  `stretch`   | 默认值，表示将元素**垂直拉伸到整个父容器**（前提是伸缩项目未设置高度） | ![image-20240322000305398](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322000305398.png) |
+
+   > 注：这里的元素指的就是伸缩项目
+
+2. 情况二：伸缩容器中存在**多行伸缩项目**，我们使用 `align-content` 属性设置元素在侧轴方向上的对齐方式。
+
+   |     属性值      |                             作用                             |                           效果举例                           |
+   | :-------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+   |  `flex-start`   |             表示元素与**侧轴的起始位置紧凑**对齐             | ![image-20240322000810046](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322000810046.png) |
+   |   `flex-end`    |             表示元素与**侧轴的结束位置紧凑**对齐             | ![image-20240322000901191](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322000901191.png) |
+   |    `center`     |               表示元素与**侧轴的中点紧凑**对齐               | ![image-20240322001100206](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322001100206.png) |
+   | `space-between` | 表示每行元素**分散**对齐，**每行伸缩项目之间的间距是相等的，上下两行伸缩项目与伸缩容器边缘无间距** | ![image-20240322001450791](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322001450791.png) |
+   | `space-around`  | 表示每行元素**分散**对齐，**每行伸缩项目之间的间距是相等的，且是上下两行伸缩项目与伸缩容器边缘间距的二倍** | ![image-20240322001607565](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322001607565.png) |
+   | `space-evenly`  | 表示 每行元素**分散**对齐，**每行伸缩项目之间的间距和上下两行伸缩项目与伸缩容器边缘间距均相等** | ![image-20240322001733529](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322001733529.png) |
+   |    `stretch`    | 默认值，表示将元素**垂直拉伸占满整个侧轴**（前提是伸缩项目未设置高度） | ![image-20240322001920284](https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322001920284.png) |
+
+   > 注
+   >
+   > - 这里的元素指的就是伸缩项目
+   >
+   > - 这里的一行元素的高度，以这一行中最高的元素为准
+   >
+   >   <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322002234255.png" alt="image-20240322002234255" style="width:50%; margin: 0 auto;" />
+
+### 伸缩盒模型应用：实现元素的水平垂直居中
+
+1. 方式一 <span id="202403220036"></span>
+
+   ```css
+   /* 父元素样式 */
+   .outer {
+       width: 400px;
+       height: 400px;
+       background-color: #888;
+       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   /* 子元素样式：实现了在父元素中的水平垂直居中 */
+   .inner {
+       width: 100px;
+       height: 100px;
+       background-color: orange;
+   }
+   ```
+
+2. 方式二 <span id="202403220037"></span>
+
+   ```css
+   /* 父元素样式 */
+   .outer {
+       width: 400px;
+       height: 400px;
+       background-color: #888;
+       
+       display: flex;
+   }
+   
+   /* 子元素样式：实现了在父元素中的水平垂直居中 */
+   .inner {
+       width: 100px;
+       height: 100px;
+       background-color: orange;
+       
+       margin: auto;
+   }
+   ```
+
+### 总结之“实现元素水平垂直居中的方式”
+
+1. 方式一：伸缩盒模型-设置子伸缩项目主轴和侧轴方向上居中，[跳转笔记](#202403220036)
+2. 方式二：伸缩盒模型-设置伸缩项目外边距为 `auto`，[跳转笔记](#202403220037)
+
+### 基准长度
+
+我们可以利用 `flex-basis` 属性设置伸缩项目在主轴方向上的**基准长度**，所谓基准长度，就是浏览器用于计算主轴上是否有多余空间的一个重要属性。
+
+- 当主轴横向时，设置基准长度会让伸缩项目的宽失效，替代为对应的基准长度值
+- 当主轴纵向时，设置基准长度会让伸缩项目的高失效，替代为对应的基准长度值
+- 默认情况下 `flex-basis: auto`，当我们设置了基准长度后，该伸缩项目的高或者宽就会失效；此外，注意该属性是给伸缩项目设置的，而不是伸缩容器
+
+### 伸缩性（day12|193p：95.3%）
+
+1. 伸（grow）：当伸缩容器有多余空间时，伸缩项目会在主轴方向上拉伸直至占满父元素。我们可以使用 `flex-grow` 属性定义伸缩项目的放大比例，默认值为 `0`，表示：即使主轴存在剩余空间，也不进行拉伸。
+
+   > 拉伸规则：多个拉伸项目以其 `flex-grow` 值，成比例地分配主轴上的剩余空间，即每个伸缩项目拉伸空间的计算方式为：
+   > $$
+   > 剩余空间 \times \frac{g_i}{\sum_{所有拉伸项目} g_j}
+   > $$
+   >
+   > > 这里记第 $i$ 个伸缩项目的 `flex-grow` 的值为 $g_i$
+   >
+   > 例：容器一、容器二、容器三的 `flex-grow` 值分别为 1、2、3，主轴上的剩余空间为 300px，则
+   >
+   > - 容器一拉伸空间为 $300\times \frac{1}{1+2+3}=50$
+   > - 容器二拉伸空间为 $300\times \frac{2}{1+2+3}=100$
+   > - 容器三拉伸空间为 $300\times \frac{3}{1+2+3}=150$
+
+2. 缩（shrink）：当伸缩容器空间不足时，伸缩项目会在主轴方向压缩到父元素内。我们可以使用 `flex-shrink` 属性定义伸缩项目的缩小比例，默认值是 `1`，表示：如果空间不足，该伸缩项目会根据其压缩规则进行缩小。（注：必须设置 `flex-wrap: nowrap`，否则伸缩项目会因为换行而无法压缩）
+
+   > 压缩规则：多个压缩项目以其 `flex-shrink` 值，并参考自身在主轴方向上的宽度或高度（主轴方向默认时，考虑宽度），分配主轴上要压缩的总空间，即每个伸缩项目压缩空间的计算方式为：
+   > $$
+   > 压缩空间 \times \frac{w_i s_i}{\sum_{所有伸缩项目}w_js_j}
+   > $$
+   >
+   > > 这里记第 $i$ 个伸缩项目的宽度为 $w_i$，伸缩项目的 `flex-shrink` 的值为 $s_i$
+   >
+   > 例：容器一、容器二、容器三的 `width` 值分别为 200、300、200，`flex-shrink` 值分别为 1、1、1，主轴上的压缩空间为 300px（即主轴宽度是 400px，因此压缩空间为 200+300+200-400=300），则
+   >
+   > - 容器一收缩空间为 $300\times\frac{200\times 1}{200\times 1+ 300\times 1+ 200\times1}=85.71$
+   > - 容器二收缩空间为 $300\times\frac{300\times 1}{200\times 1+ 300\times 1+ 200\times1}=128.57$
+   > - 容器三收缩空间为 $300\times\frac{200\times 1}{200\times 1+ 300\times 1+ 200\times1}=85.71$
+
+3. 注意事项
+
+   - `flex-grow` 和 `flex-shrink` 都是给伸缩项目设置的属性
+
+   - 为什么按照压缩规则计算出来的伸缩项目压缩后的宽度（或高度）与浏览器提供的不一样？这可能是因为当前伸缩项目存在边框，并且设置盒子的宽高以边框记（怪异盒模型），会导致浏览器的计算误差
+
+   - 为什么伸缩项目拉伸和压缩的计算方式不同（同甘不共苦）？如果伸缩项目压缩，也和拉伸一样，按照 `flex-shrink` 成比例压缩，这对宽度（或高度）较小的伸缩项目是不公平的，比如宽度（或高度）300px 和 30px 的两个伸缩项目，如果不考虑宽度（或高度），则轻易会导致 30px 的项目压缩太多，从而内容失真，当引入项目本身宽度（或高度）的因素后，压缩之后的各个项目的呈现才能更加均衡
+
+     > 注：当主轴方向水平，我们考虑的是宽度；当主轴方向垂直，我们考虑的是高度
+
+   - 压缩是否存在极限？压缩极限就是至少让伸缩项目中的内容得以呈现
+
+### 复合属性：伸缩＆基准长度
+
+我们可以通过 `flex` 复合属性同时设置伸缩项目的 `flex-grow`、`flex-shrink`、`flex-basis`，语法如下，
+
+```css
+flex: flex-grow flex-shrink flex-basis;
+```
+
+- `flex` 复合属性中三个子属性的值不可省略，顺序不可修改
+
+- `flex` 复合属性还有以下简写方式
+
+  |    简写方式    |     对应全写     |                   作用                    |
+  | :------------: | :--------------: | :---------------------------------------: |
+  |  `flex: auto`  | `flex: 1 1 auto` |    拉伸：✓；压缩：✓；基准长度：不设置     |
+  |   `flex: 1`    |  `flex: 1 1 0`   | 拉伸：✓；压缩：✓；基准长度：0（使用最多） |
+  |  `flex: none`  | `flex: 0 0 auto` |    拉伸：×；压缩：×；基准长度：不设置     |
+  | `flex: 0 auto` | `flex: 0 1 auto` |    拉伸：×；压缩：✓；基准长度：不设置     |
+
+- 我们可以借助开发者工具，快捷调整弹性盒子布局相关属性
+
+  <img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322104723583.png" alt="image-20240322104723583" style="width:50%; margin: 0 auto; display: block;" />
+
+### 项目排序与单独对齐
+
+1. 项目排序：默认情况下，伸缩项目是根据源代码中的顺序在主轴方向上依次排列的，但是我们可以根据 `order` 属性调整伸缩项目出现的视觉顺序。`order` 数值越小，则排列越靠前，默认为 `0`。
+2. 单独对齐：我们可以通过 `align-self` 调整某个伸缩项目在侧轴方向上的对齐方式，默认值是 `auto`，表示继承父元素的 `align-items` 属性的属性值。`align-self` 属性的取值为 `flex-start`、`flex-end`、`center`、`baseline`、`stretch`。
+
+[38-c3伸缩盒模型案例练习](./CODES/38-c3伸缩盒模型案例练习.html)
+
+## 响应式布局
+
+### 媒体查询之媒体类型
+
+1. 只有在**打印机或打印预览**时才应用的样式
+
+   ```css
+   @media print {
+       /* css properties */
+   }
+   ```
+
+2. 只有在**屏幕**（电脑屏幕、平板屏幕、手机屏幕）上才应用的样式
+
+   ```css
+   @media screen {
+       /* css properties */
+   }
+   ```
+
+3. 在**所有设备**上都应用的样式
+
+   ```css
+   @media all {
+       /* css properties */
+   }
+   ```
+
+4. 注：通过 `@media media-type {}` 语法，我们可以给一些特定的**设备**设置一些样式，限制只有在对应的设备上对应的样式才生效。
+
+   > - `@media media-type {}` 是写在 .css 文件或 `<style></style>` 中的
+   > - `@media media-type {}` 中的样式不存在任何优先级，因此，媒体查询中的样式写在所有样式的最后边，保证在特定设备中，媒体查询中的样式因为是后边的可以覆盖掉前边的样式
+
+5. 其他~~废弃~~使用的媒体类型 [more info](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media)
+
+   |   `media-type`   |                             含义                             |
+   | :--------------: | :----------------------------------------------------------: |
+   |   ~~`aural`~~    |                     ~~语音和声音合成器~~                     |
+   |  ~~`braille`~~   |                    ~~盲文触摸式反馈设备~~                    |
+   |    `embossed`    |                      打印的盲人印刷设备                      |
+   |  ~~`handheld`~~  |           ~~掌上设备或更小装置，如 PDA、小型电话~~           |
+   | ~~`projection`~~ |                         ~~投影设备~~                         |
+   |    ~~`tty`~~     | ~~固定的字符网络，如电报、终端设备和对字符有限制的便携设备~~ |
+   |     ~~`tv`~~     |                      ~~电视和网络电视~~                      |
+
+### 媒体查询之媒体特性
+
+1. 在视口宽度为 `800px` 时应用的样式（`viewport-width=800px`）
+
+   ```css
+   @media (width: 800px) {
+        /* css properties */
+   }
+   ```
+
+2. 在视口宽度小于等于 `700px` 时应用的样式（`viewport-width≤700px`）
+
+   ```css
+   @media (max-width: 800px) {
+        /* css properties */
+   }
+   ```
+
+3. 在视口宽度大于等于 `900px` 时应用的样式（`viewport-width≥900px`）
+
+   ```css
+   @media (min-width: 900px) {
+       /* css properties */
+   }
+   ```
+
+4. 常用的媒体特性 [more info](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media)
+
+   |  `media-feature`   |                             含义                             |
+   | :----------------: | :----------------------------------------------------------: |
+   |      `width`       |                  视口宽度<br />（等于，=）                   |
+   |    `max-width`     |              视口最大宽度<br />（小于等于，≤）               |
+   |    `min-width`     |              视口最小宽度<br />（大于等于，≥）               |
+   |      `height`      |                  视口高度<br />（等于，=）                   |
+   |    `max-height`    |              视口最大高度<br />（小于等于，≤）               |
+   |    `min-height`    |              视口最小高度<br />（大于等于，≥）               |
+   |   `device-width`   |                设备屏幕宽度<br />（等于，=）                 |
+   | `max-device-width` |            设备屏幕最大宽度<br />（小于等于，≤）             |
+   | `min-device-width` |            设备屏幕最小宽度<br />（大于等于，≥）             |
+   |   `orientation`    | 视口的旋转方向（判断是否横屏）<br />- `portrait` 视口纵向，此时高度大于宽度<br />- `landscape` 视口横向，此时宽度大于高度 |
+
+### 媒体查询之运算符
+
+1. 在视口宽度大于等于 `700px` 且小于等于 `800px` 时应用的样式（`700px≤viewport-width≤800px`）
+
+   ```css
+   @media (min-width: 700px) and (max-width: 800px) {
+        /* css properties */
+   }
+   ```
+
+2. 在屏幕上且视口宽度大于等于 `700px` 且小于等于 `800px` 时应用的样式（`700px≤viewport-width≤800px`）
+
+   ```css
+   @media screen and (min-width: 700px) and (max-width: 800px) {
+        /* css properties */
+   }
+   ```
+
+3. 在视口宽度大于等于 `800px` 或小于等于 `700px` 时应用的样式（`viewport-width≥800px, viewport-width≤700px`）
+
+   ```css
+   @media (max-width: 700px) or (min-width: 800px) {
+        /* css properties */ 
+   }
+   ```
+
+4. 在除了屏幕上应用的样式
+
+   ```css
+   @media not screen {
+       /* css properties */
+   }
+   ```
+
+5. 在且只在屏幕上应用的样式
+
+   ```css
+   @media only screen {
+       /* css properties */
+   }
+   ```
+
+6. 常用的运算符
+
+   |   运算符    | 含义 |
+   | :---------: | :--: |
+   |    `and`    |  且  |
+   | `or` 或 `,` |  或  |
+   |    `not`    | 否定 |
+   |   `only`    | 肯定 |
+
+   > `only` 运算符没有什么太大的意义，但是其可以解决 IE 兼容性问题（因为 IE 不支持这个运算符）
+
+### 常用阈值
+
+<img src="https://cdn.jsdelivr.net/gh/Nasir1423/blog-img@main/image-20240322210417516.png" alt="image-20240322210417516" style="width:80%;" />
+
+四种类型屏幕的媒体查询方式如下，
+
+1. 超小屏幕
+
+   ```css
+   @media screen and (max-width: 768px) {
+       /* css properties */
+   }
+   ```
+
+2. 中等屏幕
+
+   ```css
+   @media screen and (min-width: 768px) and (max-width: 992px) {
+       /* css properties */
+   }
+   ```
+
+3. 大屏幕
+
+   ```css
+   @media screen and (min-width: 992px) and (max-width: 1200px) {
+       /* css properties */
+   }
+   ```
+
+4. 超大屏幕
+
+   ```css
+   @media screen and (min-width: 1200px) {
+       /* css properties */
+   }
+   ```
+
+### 结合外部样式引入媒体查询样式
+
+1. 方式一：正常方式
+
+   ```css
+   /* .css 文件 */
+   /* css properties */
+   /* css properties */
+   /* css properties */
+   @media xxx {
+       /* css properties */
+   }
+   ```
+
+   ```html
+   <!-- .html 文件 -->
+   <link rel="stylesheet" href="./xxx.css">
+   ```
+
+2. 方式二：将 `.css` 文件内容作为媒体查询样式引入
+
+   ```css
+   /* .css 文件 */
+   /* css properties */
+   /* css properties */
+   /* css properties */
+   ```
+
+   ```html
+   <!-- .html 文件 -->
+   <link rel="stylesheet" media="xxx" href="./xxx.css">
+   ```
+
+   > 方式一、二中的 `xxx` 表示具体的媒体查询
+
+## BFC
+
+1. 是什么？
+
+   - `BFC` 全称为 `Block Formatting Context`，翻译为块级格式上下文，可以理解为元素的一个**特异功能**。
+   - 该特异功能**默认**情况下处于**关闭**状态，当元素满足某些条件后，该特异功能才被**激活**。
+   - 激活元素的特异功能，专业来说，该元素创建了 `BFC`（或开启了 `BFC`）
+
+2. 有何用？开启了 `BFC` 的元素，
+
+   - 其子元素不会产生 `margin` 塌陷问题
+   - 自身不会被其他浮动元素所覆盖
+   - 子元素浮动时，自身高度不会塌陷
+
+3. 怎么设置？
+
+   - 根元素 `html`
+
+   - 浮动元素
+
+   - 绝对定位和固定定位的元素
+
+   - 行内块元素
+
+   - 表格单元格 `table`、`thead`、`tbody`、`tfoot`、`th`、`td`、`tr`、`caption`
+
+   - `overflow: hidden/scroll/auto` 的元素（即不可取值为 `visible`）
+
+   - 伸缩项目
+
+   - 多列容器
+
+   - `column-span: all` 的元素
+
+   - `display: flow-root` 的元素
+
+     > 元素开启 `BFC` 副作用最低的一种方式，唯一缺点是 IE 不支持
